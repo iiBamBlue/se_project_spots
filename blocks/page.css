@@ -1,0 +1,56 @@
+/*.page {
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 400;
+  background-color: #fcf5e5;
+  min-height: 100vh;
+}
+
+.page__section {
+  max-width: 1280px;
+  max-height: 210px;
+  margin: 0 auto;
+  padding: 0;
+  /* display: grid;
+  grid-template-columns: 190px, 420px, auto;
+  grid-template-rows: 210px;
+*/ /*
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .page {
+    padding: 1rem;
+  }
+}*/
+.page {
+  padding: 2em;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0 0 40px 0;
+}
+
+/* Tablet view */
+@media (min-width: 765px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop view */
+@media (min-width: 1440px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
