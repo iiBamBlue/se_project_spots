@@ -1,28 +1,19 @@
 .profile {
   display: flex;
   padding: 34px 0 20px;
-  width: 1280px;
-  height: 210px;
-}
-
-.profile__column {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px rgba(32, 32, 0.4) solid;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .profile__avatar {
   margin-right: 20px;
-  height: 190px;
-  width: 190px;
+  border-radius: 8px;
 }
 
 .profile__column {
-  width: 420px;
-  height: 190px;
+  min-width: 420px;
+  max-height: 210px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .profile__name {
@@ -31,16 +22,39 @@
 }
 
 .profile__description {
-  margin: 114px 0 0;
+  margin: 0;
   padding: 0;
+  color: rgb(34 34 34 / 70%);
 }
 
-.profile__edit-btn {
-  margin-top: auto 0 0;
-  border-radius: 90;
+.profile__edit-button {
+  margin: 0;
+  padding: 114px 0 0;
+  text-align: start;
+  border: 0;
+  background-color: transparent;
 }
 
-.profile__add-btn {
-  margin-left: auto 0 0;
-  border-radius: 8;
+.profile__add-button {
+  shape-image-threshold: 12px 12px;
+  margin-left: auto;
+  margin-top: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 149px;
+  width: 149px;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  color: #fcf5e5;
+  background-color: #212121;
+  transition: background-color 0.5s;
+  cursor: pointer;
 }
+
+.profile__add-button:hover {
+  background-color: rgba(33, 33, 33, 0.4);
+} /*this might not actually be a thing*/

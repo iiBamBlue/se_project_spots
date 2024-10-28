@@ -27,9 +27,18 @@
   }
 }*/
 .page {
-  padding: 2em;
+  max-width: 1280px;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.page__section {
+  /* background-color: #fcf5e5;*/
   max-width: 1280px;
   margin: 0 auto;
+  /*  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;*/
 }
 
 .cards {

@@ -3,76 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <title>Spots</title>
     <meta name="author" content="Darien Johnas" />
     <meta name="description" content="figma project" />
     <meta name="keywords" content="HTML, HTML5, CSS, span, iframe" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-    <title>Spots</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <section class="header__content">
-          <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
-        </section>
+        <img src="./images/logo.svg" alt="Spot logo" class="header__logo" />
       </header>
 
       <main class="content">
-        <section class="page__section">
+        <section class="profile page__section">
           <img
             src="./images/avatar.jpg"
-            alt="Bessie Coleman"
+            alt="User Avatar"
             class="profile__avatar"
           />
+
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
-            <buttom class="profile__edit-btn"
-              ><img
-                src="./images/editbtn.svg"
-                alt="pencilicon"
-                class="profile__edit-btn"
-            /></buttom>
+            <button type="button" class="profile__edit-button">
+              <img src="./images/editbtn.svg" alt="edit icon" />Edit Profile
+            </button>
           </div>
-          <button class="profile__add-btn">
-            <img
-              src="./images/addbtn.svg"
-              alt="add icon"
-              class="profile__add-btn"
-            />
+          <button type="button" class="profile__add-button">
+            <img src="./images/addbtn.svg" alt="add icon" />New Post
           </button>
         </section>
 
-        <section class="cards">
-          <div class="card">
-            <img src="./images/valthorens.jpg" alt="x" class="card__image" />
-            <p>card 1</p>
-          </div>
-          <div class="card">
-            <img src="./images/restaurant.jpg" alt="x" class="card__image" />
-            <p>card 2</p>
-          </div>
-          <div class="card">
-            <img src="./images/outdoorcafe.jpg" alt="x" class="card__image" />
-            <p>card 3</p>
-          </div>
-          <div class="card">
-            <img src="./images/forrestbridge.jpg" alt="x" class="card__image" />
-            <p>card 4</p>
-          </div>
-          <div class="card">
-            <img src="./images/morninglight.jpg" alt="x" class="card__image" />
-            <p>card 5</p>
-          </div>
-          <div class="card">
-            <img src="./images/mtnhouse.jpg" alt="x" class="card__image" />
-            <p>6</p>
-          </div>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <li class="card">
+              <img
+                src="./images/valthorens.jpg"
+                alt="Val Thorens photo"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Val Thorens</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+
+            <li class="card">
+              <img
+                src="./images/restaurant.jpg"
+                alt="restaurant photo"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Restaurant Terrace</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/outdoorcafe.jpg"
+                alt="Outdoor Cafe photo"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">An outdoor cafe</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/forrestbridge.jpg"
+                alt="bridge over forest photo"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">
+                  A very long bridge, over the forest...
+                </h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/morninglight.jpg"
+                alt="Tunnel photo"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Tunnel with morning light</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+            <li class="card">
+              <img
+                src="./images/mtnhouse.jpg"
+                alt="house in snow photo"
+                class="card__image"
+              />
+              <div class="card__content">
+                <h2 class="card__title">Mountain house</h2>
+                <button type="button" class="card__like-button"></button>
+              </div>
+            </li>
+          </ul>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer page__section">
+        <p class="footer__copyright">2024 &copy; Darien</p>
+      </footer>
     </div>
   </body>
 </html>
