@@ -1,6 +1,6 @@
 .card {
   width: 413px;
-  height: 413px;
+  /* height: 413px;*/
   object-fit: cover;
   display: flex;
   flex-direction: column;
@@ -8,17 +8,20 @@
 }
 
 .card__image {
-  width: 413px;
-  height: 413px;
+  width: 413px; /*kevin*/
+  height: 413px; /*kevin*/
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: cover; /*kevin*/
   display: block;
 }
 
 .card__content {
-  display: flex;
+  display: flex; /*kevin*/
   align-items: center;
   justify-content: space-between;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card__title {
@@ -27,11 +30,15 @@
 }
 
 .card__like-button {
-  background-image: url(../images/likereact.svg);
+  background-image: url(../images/likereact.svg); /*kevin*/
   padding-left: auto;
-  width: 23px;
-  height: 20px;
-  border: none;
-  background-color: transparent;
-  opacity: 40%;
+  width: 23px; /*kevin*/
+  height: 20px; /*kevin*/
+  border: none; /*kevin*/
+  background-color: transparent; /*kevin*/
+  opacity: 40%; /*kevin*/
+}
+
+.card__like-button:hover {
+  opacity: 100%;
 }

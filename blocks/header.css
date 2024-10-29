@@ -1,27 +1,13 @@
-/*.header__logo {
-  margin: 0 auto;
-  width: 1440px;
-  height: 46px;
-  gap: 0px;
-  border: 0px 0px 1px 0px;
-  opacity: 0px;
-  display: flex;
-  align-items: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}*/
-
 .header {
+  margin: 0;
+  padding: 10px 0px;
   width: 100%;
   max-width: 1440px;
   height: 26px;
   background-color: #fff;
-  padding: 10px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
 
 .header__logo {

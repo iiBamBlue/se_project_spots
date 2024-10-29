@@ -28,24 +28,17 @@
 }*/
 .page {
   max-width: 1280px;
-  min-height: 100vh;
+  min-height: 100vh; /*kevin*/
   font-family: "Poppins", Arial, sans-serif;
+  background-color: #fcf5e5; /*kevin*/
 }
 
 .page__section {
-  /* background-color: #fcf5e5;*/
-  max-width: 1280px;
-  margin: 0 auto;
-  /*  text-overflow: ellipsis;
+  max-width: 1280px; /*kevin*/
+  margin: 0 auto; /*kevin*/
+  text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;*/
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 0 0 40px 0;
+  overflow: hidden;
 }
 
 /* Tablet view */

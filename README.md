@@ -27,3 +27,6 @@ Good luck and have fun!
 *also gotta fix the like emote and why thats not working
 *get all the fonts put in as project calls for cuttently only have poppins regular put in
 *cleanup blocks so that they are listed about the same way every
+
+**_ header has been cleaned up 10-29 4:20am _**
+**_ profile has been cleaned up, possible issues with a ghost padding on edit button-comments have been added for this 10-29 4:20am _**

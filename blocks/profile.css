@@ -22,17 +22,32 @@
 }
 
 .profile__description {
-  margin: 0;
+  margin: 0 0 114px;
+  /*to keep button down. if extra parameters are set
+  to the button for some reason it makes it clickable in
+  places it shouldnt*/
   padding: 0;
-  color: rgb(34 34 34 / 70%);
+  color: rgba(34, 34, 34, 0.7);
 }
 
 .profile__edit-button {
   margin: 0;
-  padding: 114px 0 0;
-  text-align: start;
-  border: 0;
+  padding: 0; /*cannot figure out where the padding is coming from that im seein in browser.. moving on*/
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  overflow: hidden;
   background-color: transparent;
+  border-width: 107px; /*not sure why but changing this from width to border width got rid of the ghost padding*/
+  border: none;
+  color: rgb(34, 34, 34);
+  opacity: 70%;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.profile__edit-button:hover {
+  opacity: 100%;
 }
 
 .profile__add-button {
@@ -43,6 +58,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   border-width: 149px;
   width: 149px;
   height: 52px;
@@ -56,5 +72,5 @@
 }
 
 .profile__add-button:hover {
-  background-color: rgba(33, 33, 33, 0.4);
-} /*this might not actually be a thing*/
+  background-color: rgba(33, 33, 33, 0.8);
+}

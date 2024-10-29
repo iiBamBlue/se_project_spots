@@ -1,17 +1,17 @@
 .cards {
-  max-width: 1280px;
   max-height: 970px;
-  padding-top: 20px;
-  margin-left: 80px;
-  padding-top: 20px;
+  padding-top: 20px; /*kevin*/
+  margin: 0;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;*/
 }
 
 .cards__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none; /*kevin*/
+  margin: 0; /*kevin*/
+  padding: 0; /*kevin*/
   gap: 40px 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 413px);
-  justify-content: center;
+  grid-template-columns: 3fr;
 }
