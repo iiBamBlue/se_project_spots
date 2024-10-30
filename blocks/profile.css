@@ -19,10 +19,12 @@
 .profile__name {
   margin: 0 0 12px;
   padding: 0;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .profile__description {
-  margin: 0 0 114px;
+  margin: 0;
   /*to keep button down. if extra parameters are set
   to the button for some reason it makes it clickable in
   places it shouldnt*/
@@ -31,14 +33,15 @@
 }
 
 .profile__edit-button {
-  margin: 0;
-  padding: 0; /*cannot figure out where the padding is coming from that im seein in browser.. moving on*/
+  margin-top: auto; /*by mimicing the add button with the margins i have gotten rid of the ghost padding and dont have to apply widths*/
+  margin-right: auto;
+  padding: 0; /*cannot figure out where the padding is coming from that im seein in browser.. moving on--fixed*/
   display: flex;
   justify-content: flex-start;
   gap: 8px;
   overflow: hidden;
   background-color: transparent;
-  border-width: 107px; /*not sure why but changing this from width to border width got rid of the ghost padding*/
+  /*border-width: 107px; not sure why but changing this from width to border width got rid of the ghost padding--played with this further and if i applied margin top and right auto like the add button it all seems to work without widths or borders*/
   border: none;
   color: rgb(34, 34, 34);
   opacity: 70%;
@@ -51,7 +54,6 @@
 }
 
 .profile__add-button {
-  shape-image-threshold: 12px 12px;
   margin-left: auto;
   margin-top: auto;
   padding: 0;
@@ -59,12 +61,12 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border-width: 149px;
   width: 149px;
   height: 52px;
   border: none;
   border-radius: 8px;
   text-align: center;
+  line-height: 1;
   color: #fcf5e5;
   background-color: #212121;
   transition: background-color 0.5s;
