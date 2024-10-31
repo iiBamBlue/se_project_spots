@@ -1,16 +1,15 @@
 .cards {
-  margin: 0;
-  padding: 20px 0 40px; /*kevin*/
+  padding: 20px 0 40px; /* top and bottom "page seperation cushion" dont list margin it inherets from page__section=good*/
   max-height: 970px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .cards__list {
-  margin: 0; /*kevin*/
+  margin: 0; /* */
   padding: 0; /*kevin*/
   list-style-type: none; /*kevin*/
   display: grid;
   gap: 40px 20px; /*gaps between cards*/
   grid-template-columns: repeat(auto-fit, 413px);
-  justify-items: center;
+  justify-content: center;
 }

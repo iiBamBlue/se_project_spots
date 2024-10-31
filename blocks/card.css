@@ -27,12 +27,12 @@
 .card__like-button {
   shape-image-threshold: 23px 20ox; /*this keeps the button from floating off center*/
   padding: 0;
-  background-image: url(../images/likereact.svg); /*kevin*/
-  width: 23px; /*kevin*/
-  height: 20px; /*kevin*/
-  border: none; /*kevin*/
-  background-color: transparent; /*kevin*/
-  opacity: 40%; /*kevin*/
+  background-image: url(../images/likereact.svg);
+  width: 23px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  opacity: 40%;
   transition: opacity 0.5s;
   cursor: pointer;
 }

@@ -1,7 +1,9 @@
 .profile {
+  margin: 0 80px;
   display: flex;
-  padding: 34px 0 20px;
+  padding: 34px 0 20px; /*the auto is so it inherits from page section*/
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+  justify-content: center;
 }
 
 .profile__avatar {
@@ -34,12 +36,12 @@
 
 .profile__edit-button {
   margin-top: auto; /*by mimicing the add button with the margins i have gotten rid of the ghost padding and dont have to apply widths*/
-  margin-right: auto;
+  /*margin-right: auto; /*this appears to no longer have an effect*/
   padding: 0; /*cannot figure out where the padding is coming from that im seein in browser.. moving on--fixed*/
   display: flex;
-  justify-content: flex-start;
+  /*justify-content: flex-start;/*this appears to no longer have an effect*/
   gap: 8px;
-  overflow: hidden;
+
   background-color: transparent;
   /*border-width: 107px; not sure why but changing this from width to border width got rid of the ghost padding--played with this further and if i applied margin top and right auto like the add button it all seems to work without widths or borders*/
   border: none;
@@ -65,8 +67,7 @@
   height: 52px;
   border: none;
   border-radius: 8px;
-  text-align: center;
-  line-height: 1;
+  font-weight: 500;
   color: #fcf5e5;
   background-color: #212121;
   transition: background-color 0.5s;
@@ -75,4 +76,16 @@
 
 .profile__add-button:hover {
   background-color: rgba(33, 33, 33, 0.8);
+}
+
+@media screen and {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile__avatar {
+    margin-right: 0;
+    height: ;
+    width: ;
+  }
 }

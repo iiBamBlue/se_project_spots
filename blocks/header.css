@@ -1,8 +1,7 @@
 .header {
-  margin: 0;
-  padding: 10px 0px;
+  padding: 10px 0;
   width: 100%;
-  max-width: 1440px;
+
   height: 26px;
   background-color: #fff;
   display: flex;
