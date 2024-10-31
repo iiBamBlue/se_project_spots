@@ -3,14 +3,14 @@
 }
 
 .card__image {
-  width: 413px;
+  width: 413px; /* width and height keep image correct size*/
   height: 413px;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: cover; /* keeps images looking nice */
 }
 
 .card__content {
-  margin: 12px 0 0;
+  margin: 12px 0 0; /* bumper between image and text */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,12 +23,14 @@
   font-size: 20px;
   line-height: 1.2;
   text-overflow: ellipsis;
-  white-space: no-wrap;
   overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  max-width: 413px;
 }
 
 .card__like-button {
-  shape-image-threshold: 23px 20ox; /*this keeps the button from floating off center*/
   padding: 0;
   background-image: url(../images/likereact.svg);
   width: 23px;
@@ -62,10 +64,12 @@
     margin: 0;
     font-size: 16px;
     line-height: 1;
+    max-width: 288px;
   }
 
+  /* cannot figure out how to make the like button to not cut off*/
   .card__like-button {
-    shape-image-threshold: unset;
+    width: 20px;
     height: 18px;
   }
 }

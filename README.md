@@ -20,17 +20,12 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 Good luck and have fun!
 
-**_ remember to _**
-*cleanup comments of old sandbox coding
-*add comments that are necessary (if needed)
-*trying to figure out the grid layout... cards, card, page, html are all the folders i gotta poke around with to find out why its not working
-*also gotta fix the like emote and why thats not working
-*get all the fonts put in as project calls for cuttently only have poppins regular put in
-*cleanup blocks so that they are listed about the same way every
+## notes to self
 
-**_ conent is cleaned and descriptions have been commented made a commit ready for submission _**
+**_ content is cleaned and descriptions have been commented made a commit ready for submission _**
 **_ header has been cleaned and added descriptionss. commit sent. ready for submission _**
 **_ profile clean and descriptions added. commit sent. ready for submission _**
 **_ footer cleaned up and descriptions added. commit made. ready for submission _**
-
-**_ profile has been cleaned up, possible issues with a ghost padding on edit button-comments have been added for this 10-29 4:20am _**
+**_ cards clean and descriptions added. commit sent ready for submission _**
+**_ card clean and descriptions added. commit sent. ready for submission _**
+**_ page cleaned and described. commit sent. ready for submission _**
