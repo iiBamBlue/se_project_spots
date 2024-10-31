@@ -1,6 +1,5 @@
 .cards {
   padding: 20px 0 40px; /* top and bottom "page seperation cushion" */
-  max-height: 970px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
@@ -23,7 +22,6 @@
 @media screen and (max-width: 627px) {
   .cards {
     padding: 20px 0 20px;
-    max-height: 100vh;
   }
 
   .cards__list {

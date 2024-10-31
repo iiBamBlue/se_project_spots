@@ -62,6 +62,7 @@
   opacity: 70%;
   transition: opacity 0.5s;
   cursor: pointer;
+  width: fit-content;
 }
 
 .profile__edit-button:hover {

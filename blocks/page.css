@@ -1,10 +1,12 @@
 .page {
+  background-color: #fcf5e5; /* so the other color dont mess with the header */
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+.page__content {
   padding: 0;
   margin: auto; /*centers everything on webpage*/
-  max-width: 1440px; /*biggest we want the page to stretch "the background color mostly*/
   min-height: 100vh;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  background-color: #fff; /* so the other color dont mess with the header */
 }
 
 .page__section {

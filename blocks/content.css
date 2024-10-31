@@ -4,3 +4,9 @@
   padding: 0 20px;
   background-color: #fcf5e5; /*keep background colors correct during shrinkage*/
 }
+
+@media screen and (max-width: 330px) {
+  .content {
+    padding: 0 10px;
+  }
+}
