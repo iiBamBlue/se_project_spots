@@ -6,10 +6,20 @@
 
 .cards__list {
   margin: 0; /* */
-  padding: 0; /*kevin*/
-  list-style-type: none; /*kevin*/
+  padding: 0;
+  /list-style-type: none;
   display: grid;
   gap: 40px 20px; /*gaps between cards*/
   grid-template-columns: repeat(auto-fit, 413px);
   justify-content: center;
+}
+
+@media screen and (max-width: 627px) {
+  .cards {
+    margin: auto;
+  }
+
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
+  }
 }

@@ -30,5 +30,6 @@ Good luck and have fun!
 
 **_ conent is cleaned and descriptions have been commented made a commit ready for submission _**
 **_ header has been cleaned and added descriptionss. commit sent. ready for submission _**
+**_ profile clean and descriptions added. commit sent. ready for submission _**
 
 **_ profile has been cleaned up, possible issues with a ghost padding on edit button-comments have been added for this 10-29 4:20am _**

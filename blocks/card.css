@@ -1,5 +1,10 @@
 .card {
   max-width: 413px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .card__image {
@@ -10,18 +15,18 @@
 }
 
 .card__content {
+  margin: 12px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 500;
-  line-height: 1.2;
+  align-items: center;
 }
 
 .card__title {
-  margin: 12px 0 0;
+  margin: 0;
   font-weight: 500;
-  font-size: 20px; /* because if i used just line height the font size would have still been wrong this corrects both */
-  align-items: center;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .card__like-button {
@@ -39,4 +44,30 @@
 
 .card__like-button:hover {
   opacity: 100%;
+}
+
+@media screen and (max-width: 627px) {
+  .card {
+    max-width: 288px;
+  }
+
+  .card__image {
+    width: 288px;
+    height: 288px;
+  }
+
+  .card__content {
+    margin: 12px 0 0;
+  }
+
+  .card__title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .card__like-button {
+    shape-image-threshold: unset;
+    height: 18px;
+  }
 }

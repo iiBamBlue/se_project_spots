@@ -1,15 +1,19 @@
 .footer {
-  margin: 0;
-  background-color: #333;
-  color: white;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  text-align: center;
+  background-color: #fcf5e5;
+  min-height: 100vh;
   width: 100%;
 }
 
 .footer__copyright {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: 60px 0;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
   color: rgba(33, 33, 33, 0.7);
+}
+
+@media screen and (max-width: 627px) {
+  .footer {
+  }
 }

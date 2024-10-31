@@ -10,5 +10,4 @@
 .page__section {
   max-width: 1280px; /*biggest we want the actual conent to stretch*/
   margin: 0 auto; /* keeps the content centered on the background */
-  background-color: #fcf5e5;
 }
