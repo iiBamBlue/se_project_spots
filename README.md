@@ -1,6 +1,22 @@
 # Project 3: Spots
 
-### Overview
+## Description
+
+- Responsive design for figma app, elements are displayed correctly on popular screen sizs
+
+## Tech Stack
+
+- HTML
+- CSS
+- Responsive design for popular screen sizes 320px-2440px
+
+## Deployment
+
+this webpage is deployed to GitHub Pages
+
+- Depoloyment Link:
+
+### Overview from Triple Ten
 
 - Intro
 - Figma
@@ -22,10 +38,10 @@ Good luck and have fun!
 
 ## notes to self
 
-**_ content is cleaned and descriptions have been commented made a commit ready for submission _**
-**_ header has been cleaned and added descriptionss. commit sent. ready for submission _**
-**_ profile clean and descriptions added. commit sent. ready for submission _**
-**_ footer cleaned up and descriptions added. commit made. ready for submission _**
-**_ cards clean and descriptions added. commit sent ready for submission _**
-**_ card clean and descriptions added. commit sent. ready for submission _**
-**_ page cleaned and described. commit sent. ready for submission _**
+- content is cleaned and descriptions have been commented made a commit ready for submission
+- header has been cleaned and added descriptionss. commit sent. ready for submission
+- profile clean and descriptions added. commit sent. ready for submission
+- footer cleaned up and descriptions added. commit made. ready for submission
+- cards clean and descriptions added. commit sent ready for submission
+- card clean and descriptions added. commit sent. ready for submission
+- page cleaned and described. commit sent. ready for submission
