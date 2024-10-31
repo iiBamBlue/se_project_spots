@@ -7,19 +7,19 @@
 
 .profile__avatar {
   margin-right: 20px;
+  height: 190px;
+  width: 190px;
   border-radius: 8px;
 }
 
+/* contains Name Description and edit button*/
 .profile__column {
-  min-width: 420px;
-  max-height: 210px;
   display: flex;
   flex-direction: column;
 }
 
 .profile__name {
-  margin: 0 0 12px;
-  padding: 0;
+  margin: 0 0 12px; /*is creating the gap from description*/
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
@@ -27,25 +27,24 @@
 
 .profile__description {
   margin: 0;
-  /*to keep button down. if extra parameters are set
-  to the button for some reason it makes it clickable in
-  places it shouldnt*/
   padding: 0;
   color: rgba(34, 34, 34, 0.7);
 }
 
+/*notes on this button are to keep track of the strange anomily, Dot-Bot's suggestion*/
 .profile__edit-button {
   margin-top: auto; /*by mimicing the add button with the margins i have gotten rid of the ghost padding and dont have to apply widths*/
   /*margin-right: auto; /*this appears to no longer have an effect*/
-  padding: 0; /*cannot figure out where the padding is coming from that im seein in browser.. moving on--fixed*/
-  display: flex;
+  padding: 0; /*is keeping button in its corner /*cannot figure out where the padding is coming from that im seein in browser.. moving on--fixed*/
+  display: flex; /* is allowing gap to be used and keeping it inline with name and description */
   /*justify-content: flex-start;/*this appears to no longer have an effect*/
   gap: 8px;
-
+  font-weight: 500;
+  line-height: 1;
   background-color: transparent;
   /*border-width: 107px; not sure why but changing this from width to border width got rid of the ghost padding--played with this further and if i applied margin top and right auto like the add button it all seems to work without widths or borders*/
   border: none;
-  color: rgb(34, 34, 34);
+  color: #212121;
   opacity: 70%;
   transition: opacity 0.5s;
   cursor: pointer;
@@ -56,18 +55,19 @@
 }
 
 .profile__add-button {
-  margin-left: auto;
-  margin-top: auto;
+  margin-left: auto; /* is pushing it from the rest */
+  margin-top: auto; /* pushing it down from top */
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* is allowing use of gap */
+  justify-content: center; /* aligning text horizontally */
+  align-items: center; /* aligning text vertically */
   gap: 8px;
   width: 149px;
   height: 52px;
   border: none;
   border-radius: 8px;
   font-weight: 500;
+  line-height: 1;
   color: #fcf5e5;
   background-color: #212121;
   transition: background-color 0.5s;
@@ -78,14 +78,18 @@
   background-color: rgba(33, 33, 33, 0.8);
 }
 
-@media screen and {
+@media screen and (max-width: 627px) {
   .profile {
     flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
   }
 
   .profile__avatar {
-    margin-right: 0;
-    height: ;
-    width: ;
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
   }
 }

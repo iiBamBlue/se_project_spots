@@ -1,14 +1,14 @@
 .page {
   padding: 0;
   margin: auto; /*centers everything on webpage*/
-  max-width: 1440px; /*biggest we want the page to stretch*/
-  min-height: 100vh; /*kevin*/
+  max-width: 1440px; /*biggest we want the page to stretch "the background color mostly*/
+  min-height: 100vh;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  background-color: #fff;
+  background-color: #fff; /* so the other color dont mess with the header */
 }
 
 .page__section {
-  max-width: 1280px; /*kevin*/
-  margin: 0 auto; /*kevin*/
-  background-color: #fcf5e5; /*kevin*/
+  max-width: 1280px; /*biggest we want the actual conent to stretch*/
+  margin: 0 auto; /* keeps the content centered on the background */
+  background-color: #fcf5e5;
 }

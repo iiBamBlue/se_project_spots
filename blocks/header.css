@@ -1,7 +1,6 @@
 .header {
-  padding: 10px 0;
+  padding: 10px 0; /*page seperation cushion */
   width: 100%;
-
   height: 26px;
   background-color: #fff;
   display: flex;
