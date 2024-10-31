@@ -37,11 +37,11 @@
   font-weight: 500;
   line-height: 1;
   color: rgba(34, 34, 34, 0.7);
-  text-overflow: ellipsis;
-  overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
   max-width: 420px;
 }
 
