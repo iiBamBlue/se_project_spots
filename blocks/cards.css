@@ -1,13 +1,13 @@
 .cards {
-  padding: 20px 0 40px; /* top and bottom "page seperation cushion" dont list margin it inherets from page__section=good*/
+  padding: 20px 0 40px; /* top and bottom "page seperation cushion" */
   max-height: 970px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .cards__list {
-  margin: 0; /* */
+  margin: 0;
   padding: 0;
-  /list-style-type: none;
+  list-style-type: none;
   display: grid;
   gap: 40px 20px; /*gaps between cards*/
   grid-template-columns: repeat(auto-fit, 413px);
@@ -16,10 +16,13 @@
 
 @media screen and (max-width: 627px) {
   .cards {
-    margin: auto;
+    padding: 20px 0 20px;
+    max-height: 100vh;
+    overflow: scroll;
   }
 
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px 20px;
   }
 }
