@@ -48,25 +48,22 @@
 /*notes on this button are to keep track of the strange anomily, Dot-Bot's suggestion*/
 .profile__edit-button {
   margin-top: auto; /*by mimicing the add button with the margins i have gotten rid of the ghost padding and dont have to apply widths*/
-  /*margin-right: auto; /*this appears to no longer have an effect*/
-  padding: 0; /*is keeping button in its corner /*cannot figure out where the padding is coming from that im seein in browser.. moving on--fixed*/
+  padding: 0; /*is keeping button in its corner */
+  width: fit-content; /* finally clickable only where its ment to be clicked at*/
   display: flex; /* is allowing gap to be used and keeping it inline with name and description */
-  /*justify-content: flex-start;/*this appears to no longer have an effect*/
   gap: 8px;
   font-weight: 500;
   line-height: 1;
   background-color: transparent;
-  /*border-width: 107px; not sure why but changing this from width to border width got rid of the ghost padding--played with this further and if i applied margin top and right auto like the add button it all seems to work without widths or borders*/
   border: none;
   color: #212121;
   opacity: 70%;
   transition: opacity 0.5s;
   cursor: pointer;
-  width: fit-content;
 }
 
 .profile__edit-button:hover {
-  opacity: 100%;
+  opacity: 100%; /* very subtle change but removes overlay during hover */
 }
 
 .profile__add-button {
@@ -90,7 +87,12 @@
 }
 
 .profile__add-button:hover {
-  background-color: rgba(33, 33, 33, 0.8);
+  background-color: rgba(
+    33,
+    33,
+    33,
+    0.8
+  ); /*changes button color during hover */
 }
 
 @media screen and (max-width: 627px) {
