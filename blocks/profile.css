@@ -23,6 +23,7 @@
   font-weight: 500;
   font-size: 32px;
   line-height: 1;
+  color: #212121;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -92,7 +93,7 @@
     33,
     33,
     0.8
-  ); /*changes button color during hover */
+  ); /*changes button color during hover. no idea why it keeps formatting to this nonsense */
 }
 
 @media screen and (max-width: 627px) {

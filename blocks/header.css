@@ -1,10 +1,9 @@
 .header {
   padding: 10px 0; /*page seperation cushion */
-  width: 100%;
   background-color: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* keeps logo center */
+  align-items: center; /* keeps logo center */
 }
 
 .header__logo {

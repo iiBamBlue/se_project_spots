@@ -3,6 +3,7 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
+/* new rule created so i didnt have to redo too much code */
 .page__content {
   padding: 0;
   margin: auto; /*centers everything on webpage*/
