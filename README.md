@@ -39,20 +39,23 @@ this webpage is deployed to GitHub Pages
 
 ## **_Sneak Peak_**
 
-- Desktop View
+- #### Desktop View
+
   ![Desktop View](./images/desktopbrowser.png)
 
-- Big Tablet View
+- #### Big Tablet View
+
   ![Big Tablet View](./images/tabletview.png)
 
-- Small Tablet View
+- #### Small Tablet View
+
   ![Small Tablet View](./images/smalltabletview.png)
 
-- Mobile View
+- #### Mobile View
+
   ![Mobile View](./images/appview.png)
 
-- WIP GIF
-- WIP Video
+- #### Video Deployment Link: ### ***https://1drv.ms/v/s!AuLgZqmc_oRWjOMXpXFkDUQ95VXR4A***
 
 ### **_Overview from Triple Ten_**
 
@@ -84,4 +87,4 @@ Good luck and have fun!
 - card clean and descriptions added. commit sent. ready for submission
 - page cleaned and described. commit sent. ready for submission
 
-  ### - need to add video
+  ~~### - need to add video~~
