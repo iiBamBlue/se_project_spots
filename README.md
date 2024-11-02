@@ -55,8 +55,6 @@ this webpage is deployed to GitHub Pages
 
   ![Mobile View](./images/appview.png)
 
-- #### Video Deployment Link: ### ***https://1drv.ms/v/s!AuLgZqmc_oRWjOMXpXFkDUQ95VXR4A***
-
 ### **_Overview from Triple Ten_**
 
 - Intro
