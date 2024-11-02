@@ -28,12 +28,14 @@
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  max-width: 413px;
+  max-width: 353px;
 }
 
 .card__like-button {
   padding: 0;
   background-image: url(../images/likereact.svg);
+  background-repeat: no-repeat; /* this and bg size is keeping the icon true to size */
+  background-size: contain;
   width: 23px;
   height: 20px;
   border: none;
@@ -60,10 +62,9 @@
   .card__title {
     font-size: 16px;
     line-height: 1;
-    max-width: 288px;
+    max-width: 231px;
   }
 
-  /* cannot figure out how to make the like button to not cut off*/
   .card__like-button {
     width: 20px;
     height: 18px;
