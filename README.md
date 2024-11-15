@@ -21,12 +21,13 @@
 
 ## Description
 
-- Responsive design for figma app, elements are displayed correctly on popular screen sizs
+- Responsive design for figma app, elements are displayed correctly on popular screen sizes
 
 ## Tech Stack
 
 - HTML
 - CSS
+- JavaScript
 - Responsive design for popular screen sizes 320px-2440px
 - Overflow Management
 - Hover effects
