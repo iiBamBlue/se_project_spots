@@ -1,0 +1,134 @@
+/*modal=popup box*/
+.modal {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 16px;
+  background-color: rgba(0, 0, 0, 0.5);
+  /*darkens background when edit button is activated*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  /*keeps popup hidden until activated*/
+}
+
+/*when edit button is clicked pop up should initiate*/
+.modal_opened {
+  visibility: visible;
+}
+
+/*popup box*/
+.modal__container {
+  background: #fff;
+  padding: 32px 50px;
+  max-width: 730px;
+  width: 100%; /*so popup box is as wide as design calls. w/o it box is too small*/
+  position: relative;
+  box-sizing: border-box; /*so padding doesnt add to complete size*/
+  border-radius: 8px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/closebutton.svg);
+  background-repeat: no-repeat; /* this and bg size is keeping the icon true to size */
+  border: none;
+  background-color: transparent;
+  opacity: 40%;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.modal__close-button:hover {
+  opacity: 100%;
+}
+
+.modal__title {
+  margin: 0 0 32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  color: #212121;
+}
+
+.modal__label {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #212121;
+}
+
+.modal__input {
+  padding: 16px 12px;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.4);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  color: #212121;
+  transition: border-color 0.5s;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal__input:hover {
+  border-color: #000;
+}
+
+.modal__submit-button {
+  width: 156px;
+  padding: 18px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fcf5e5;
+  background-color: #212121;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 627px) {
+  .modal {
+    padding: 0 10px;
+  }
+
+  .modal__container {
+    padding: 12px;
+  }
+
+  .modal__title {
+    font-size: 20px;
+    margin: 10px 0 34px;
+  }
+
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal__label {
+    margin-bottom: 24px;
+  }
+
+  .modal__input {
+    font-size: 16px;
+  }
+
+  .modal__submit-button {
+    width: 100%;
+  }
+}

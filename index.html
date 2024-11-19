@@ -116,6 +116,33 @@
       <footer class="footer page__section">
         <p class="footer__copyright">2024 &copy; Darien</p>
       </footer>
+      <div class="modal modal_opened">
+        <div class="modal__container">
+          <button type="submit" class="modal__close-button"></button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form name="edit-profile" class="modal__form">
+            <label for="name" class="modal__label">
+              Name
+              <input
+                id="name"
+                type="text"
+                class="modal__input"
+                placeholder="Your Name"
+              />
+            </label>
+            <label for="description" class="modal__label">
+              Bio
+              <input
+                id="description"
+                type="text"
+                class="modal__input"
+                placeholder="Say something about you"
+              />
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
     <script defer src="./scripts/index.js"></script>
   </body>
