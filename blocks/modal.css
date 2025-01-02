@@ -163,6 +163,12 @@
     right: 12px;
   }
 
+  /*fix*/
+  .modal__close-button_type_preview {
+    top: -30px;
+    right: 54.5px;
+  }
+
   .modal__label {
     margin-bottom: 24px;
   }

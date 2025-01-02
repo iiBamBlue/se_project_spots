@@ -7,6 +7,7 @@
   height: 413px;
   border-radius: 8px;
   object-fit: cover; /* keeps images looking nice */
+  cursor: pointer;
 }
 
 .card__content {
@@ -97,5 +98,9 @@
   .card__like-button {
     width: 20px;
     height: 18px;
+  }
+
+  .card__delete-button {
+    margin: 10px 246px 0;
   }
 }
