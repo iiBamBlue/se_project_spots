@@ -93,7 +93,7 @@
     33,
     33,
     0.8
-  ); /*changes button color during hover. no idea why it keeps formatting to this nonsense */
+  ); /*changes button color during hover.*/
 }
 
 @media screen and (max-width: 627px) {

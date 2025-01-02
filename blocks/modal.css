@@ -1,7 +1,6 @@
 /*modal=popup box*/
 .modal {
   position: fixed;
-
   top: 0;
   left: 0;
   bottom: 0;
@@ -33,6 +32,34 @@
   border-radius: 8px;
 }
 
+.modal__container_type_preview {
+  padding: 0;
+  background-color: transparent;
+}
+
+.modal__image {
+  width: 100%;
+  object-fit: cover;
+  max-width: 80vw;
+  max-height: 80vh;
+  border: none;
+  border-radius: 8px;
+}
+
+.modal__caption {
+  margin: 8px 0 0; /* bumper between image and text */
+  padding: 10px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  background-color: #212121;
+}
+
 .modal__close-button {
   position: absolute;
   top: 32px;
@@ -46,6 +73,13 @@
   opacity: 40%;
   transition: opacity 0.5s;
   cursor: pointer;
+}
+
+.modal__close-button_type_preview {
+  background-image: url(../images/close-button-light.svg);
+  top: 0;
+  right: -52.5px;
+  opacity: 100%;
 }
 
 .modal__close-button:hover {
@@ -99,6 +133,15 @@
   background-color: #212121;
   transition: background-color 0.5s;
   cursor: pointer;
+}
+
+.modal__submit-button:hover {
+  background-color: rgba(
+    33,
+    33,
+    33,
+    0.8
+  ); /*changes button color during hover. no idea why it keeps formatting to this nonsense */
 }
 
 @media screen and (max-width: 627px) {

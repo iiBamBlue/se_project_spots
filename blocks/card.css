@@ -31,6 +31,26 @@
   max-width: 353px;
 }
 
+.card__delete-button {
+  position: absolute; /* having absolute makes sure each card has a button and in the correct spot*/
+  margin: 10px 371px 0;
+  padding: 0; /* controls size of svg i guess */
+  background-image: url(../images/delete-icon.svg);
+  background-repeat: no-repeat; /* this and bg size is keeping the icon true to size */
+  background-size: contain;
+  width: 32px; /*makes sure svg actually shows */
+  height: 32px; /*same as width*/
+  border: none;
+  background-color: transparent;
+  opacity: 100%;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.card__delete-button:hover {
+  background-image: url(../images/delete-icon-hover.svg);
+}
+
 .card__like-button {
   padding: 0;
   background-image: url(../images/likereact.svg);
@@ -47,6 +67,15 @@
 
 .card__like-button:hover {
   opacity: 100%;
+}
+
+.card__like-button_liked {
+  background-image: url(../images/likEDreact.svg);
+  opacity: 100%;
+}
+
+.card__like-button_liked:hover {
+  opacity: 40%;
 }
 
 @media screen and (max-width: 627px) {
