@@ -34,6 +34,11 @@
 
 .modal__container_type_preview {
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: transparent;
 }
 
@@ -54,8 +59,9 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.5;
   color: #fff;
   background-color: #212121;
 }
@@ -165,8 +171,6 @@
 
   /*fix*/
   .modal__close-button_type_preview {
-    top: -30px;
-    right: 54.5px;
   }
 
   .modal__label {
@@ -179,5 +183,10 @@
 
   .modal__submit-button {
     width: 100%;
+  }
+
+  .modal__caption {
+    font-size: 16px;
+    line-height: 1.2;
   }
 }
