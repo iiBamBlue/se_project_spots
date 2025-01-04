@@ -171,6 +171,8 @@
 
   /*fix*/
   .modal__close-button_type_preview {
+    top: -47px;
+    right: 15apx;
   }
 
   .modal__label {
@@ -190,4 +192,3 @@
     line-height: 1.2;
   }
 }
-ta
