@@ -119,6 +119,7 @@ function handleCardFormSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+  evt.target.reset(); // This will clear the form inputs so user doesnt have to manually delete info
   closeModal(cardModal);
 }
 

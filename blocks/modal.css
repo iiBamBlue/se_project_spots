@@ -14,11 +14,14 @@
   justify-content: center;
   visibility: hidden;
   /*keeps popup hidden until activated*/
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 /*when edit button is clicked pop up should initiate*/
 .modal_opened {
   visibility: visible;
+  opacity: 100%;
 }
 
 /*popup box*/
@@ -154,6 +157,12 @@
 
   .modal__container {
     padding: 12px;
+  }
+
+  .modal__container_type_preview {
+    padding: 0;
+    width: 100%;
+    max-width: 288px;
   }
 
   .modal__title {
