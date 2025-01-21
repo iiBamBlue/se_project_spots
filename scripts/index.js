@@ -43,6 +43,7 @@ const editModalDescriptionInput = editModal.querySelector(
 // Modal - Add Card
 const cardModal = document.querySelector("#new-card-modal");
 const cardForm = cardModal.querySelector(".modal__form");
+const cardSubmitButton = cardModal.querySelector(".modal__submit-button");
 const cardModalCloseButton = cardModal.querySelector(".modal__close-button");
 const cardLinkInput = cardModal.querySelector("#new-card-link-input");
 const cardCaptionInput = cardModal.querySelector("#new-card-caption-input");
@@ -120,6 +121,7 @@ function handleCardFormSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset(); // This will clear the form inputs so user doesnt have to manually delete info
+  disableButton(cardSubmitButton);
   closeModal(cardModal);
 }
 
@@ -127,6 +129,7 @@ function handleCardFormSubmit(evt) {
 editModalButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editForm, [editModalNameInput, editModalDescriptionInput]);
   openModal(editModal);
 });
 editModalCloseButton.addEventListener("click", () => {
