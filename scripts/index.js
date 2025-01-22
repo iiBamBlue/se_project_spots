@@ -121,7 +121,7 @@ function handleCardFormSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset(); // This will clear the form inputs so user doesnt have to manually delete info
-  disableButton(cardSubmitButton);
+  disableButton(cardSubmitButton, settings);
   closeModal(cardModal);
 }
 
@@ -129,7 +129,11 @@ function handleCardFormSubmit(evt) {
 editModalButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(editForm, [editModalNameInput, editModalDescriptionInput]);
+  resetValidation(
+    editForm,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
   openModal(editModal);
 });
 editModalCloseButton.addEventListener("click", () => {
