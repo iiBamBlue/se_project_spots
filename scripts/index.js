@@ -96,6 +96,23 @@ function getCardElement(data) {
   return cardElement;
 }
 
+// Close modal on overlay click
+document.addEventListener("click", (event) => {
+  if (event.target.classList.contains("modal_opened")) {
+    closeModal(event.target);
+  }
+});
+
+// Close modal on Escape key press
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+});
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
 }

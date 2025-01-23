@@ -6,8 +6,6 @@
   bottom: 0;
   right: 0;
   padding: 0 16px;
-  background-color: rgba(0, 0, 0, 0.5);
-  /*darkens background when edit button is activated*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +20,18 @@
 .modal_opened {
   visibility: visible;
   opacity: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /*darkens background when edit button is activated*/
+  z-index: 1;
 }
 
 /*popup box box*/
@@ -33,6 +43,7 @@
   position: relative;
   box-sizing: border-box; /*so padding doesnt add to complete size*/
   border-radius: 8px;
+  z-index: 2;
 }
 
 /*popup for previewing images*/
