@@ -22,6 +22,8 @@
 ## Description
 
 - Responsive design for figma app, elements are displayed correctly on popular screen sizes
+- The validateURL function checks if the input matches a URL pattern. If the input is not a valid URL, an error message is displayed.
+- modal with an overlay, content area, and close button.
 
 ## Tech Stack
 
@@ -31,6 +33,7 @@
 - Responsive design for popular screen sizes 320px-2440px
 - Overflow Management
 - Hover effects
+- validateURL
 
 ## Deployment
 
