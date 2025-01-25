@@ -182,8 +182,11 @@
   .modal__container_type_preview {
     padding: 0;
     width: 100%;
-
     max-width: 288px;
+  }
+
+  .modal__image {
+    width: 100%;
   }
 
   .modal__title {
