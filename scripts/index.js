@@ -1,3 +1,6 @@
+import { enableValidation, settings, resetValidation } from "./validation.js";
+
+// Initial Cards
 const initialCards = [
   {
     name: "Val Thorens",
@@ -25,11 +28,15 @@ const initialCards = [
   },
 ];
 
-// Profile
+// Profile Selectors
 const editModalButton = document.querySelector(".profile__edit-button");
 const cardModalButton = document.querySelector(".profile__add-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
+
+// Modal Selectors
+const modals = document.querySelectorAll(".modal");
+const closeButtons = document.querySelectorAll(".modal__close-button");
 
 // Modal - Edit Profile
 const editModal = document.querySelector("#edit-modal");
@@ -90,6 +97,12 @@ function getCardElement(data) {
 function openModal(modal) {
   modal.classList.add("modal_opened");
 
+  document.addEventListener("click", handleOverlayClick);
+  document.addEventListener("keydown", handleEscapeKeyPress);
+
+  modal._handleOverlayClick = handleOverlayClick;
+  modal._handleEscapeKeyPress = handleEscapeKeyPress;
+
   function handleOverlayClick(event) {
     if (event.target.classList.contains("modal_opened")) {
       closeModal(modal);
@@ -101,12 +114,6 @@ function openModal(modal) {
       closeModal(modal);
     }
   }
-
-  document.addEventListener("click", handleOverlayClick);
-  document.addEventListener("keydown", handleEscapeKeyPress);
-
-  modal._handleOverlayClick = handleOverlayClick;
-  modal._handleEscapeKeyPress = handleEscapeKeyPress;
 }
 
 function closeModal(modal) {
@@ -117,7 +124,6 @@ function closeModal(modal) {
 }
 
 // Universal Close Button Handler
-const closeButtons = document.querySelectorAll(".modal__close-button");
 closeButtons.forEach((button) => {
   const modal = button.closest(".modal");
   button.addEventListener("click", () => closeModal(modal));
@@ -133,15 +139,24 @@ function handleEditFormSubmit(evt) {
 
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
+
+  // Validate image URL before adding
+  const imageURL = cardLinkInput.value;
   const inputValues = {
     name: cardCaptionInput.value,
-    link: cardLinkInput.value,
+    link: imageURL,
   };
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-  evt.target.reset(); // This will clear the form inputs so user doesnt have to manually delete info
-  disableButton(cardSubmitButton, settings);
-  closeModal(cardModal);
+
+  const img = new Image();
+  img.src = imageURL;
+  img.onload = () => {
+    const cardElement = getCardElement(inputValues);
+    cardsList.prepend(cardElement);
+    evt.target.reset(); // Clear the form inputs after submission
+    disableButton(cardSubmitButton, settings);
+    closeModal(cardModal);
+  };
+  img.onerror = () => alert("Invalid image URL. Please check your input.");
 }
 
 // Edit Modal Listeners
@@ -170,3 +185,4 @@ initialCards.forEach((card) => {
   const cardElement = getCardElement(card);
   cardsList.append(cardElement);
 });
+enableValidation(settings);
