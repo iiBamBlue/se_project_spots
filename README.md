@@ -34,6 +34,7 @@
 - Overflow Management
 - Hover effects
 - validateURL
+- webpack
 
 ## Deployment
 
