@@ -1,4 +1,20 @@
-import { enableValidation, settings, resetValidation } from "./validation.js";
+import "./index.css"; // Importing the CSS file
+import {
+  enableValidation,
+  settings,
+  resetValidation,
+} from "../scripts/validation.js"; // Importing validation functions
+
+// Importing images and other assets
+import logoPath from "../images/logo.svg";
+import avatarPath from "../images/avatar.jpg";
+import editButtonPath from "../images/editbtn.svg";
+import addButtonPath from "../images/addbtn.svg";
+
+document.querySelector(".header__logo").src = logoPath;
+document.querySelector(".profile__avatar").src = avatarPath;
+document.querySelector(".profile__edit-button img").src = editButtonPath;
+document.querySelector(".profile__add-button img").src = addButtonPath;
 
 // Initial Cards
 const initialCards = [
