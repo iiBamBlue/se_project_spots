@@ -83,6 +83,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
 }
@@ -96,6 +97,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 420px;
@@ -159,10 +161,35 @@
     padding-top: 20px;
   }
 
+  .profile__avatar-container {
+    height: 80px;
+    width: 80px;
+  }
+
   .profile__avatar {
     margin: 0 0 12px;
     height: 80px;
     width: 80px;
+  }
+
+  .profile__avatar-button {
+    margin-bottom: 4.66px;
+    padding: 4px 4px;
+    height: 23.34px;
+    width: 23.34px;
+    opacity: 0;
+    top: 52px;
+    left: 63px;
+    font-size: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #212121;
+    transition: background-color 0.5s;
+    cursor: pointer;
+  }
+
+  .profile__avatar-container:hover .profile__avatar-button {
+    opacity: 60%; /* This will make the button visible on hover */
   }
 
   .profile__name {
