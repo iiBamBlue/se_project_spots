@@ -143,12 +143,6 @@
   color: rgba(255, 0, 0, 0.7);
 }
 
-.modal__form {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px; /* adds space between buttons */
-}
-
 .modal__submit-button {
   width: 156px;
   padding: 18px 0;
@@ -176,7 +170,12 @@
   cursor: not-allowed;
 }
 
-/*modal for Deleting image*/
+/*-------modal for Deleting image----------*/
+#delete-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px; /* adds space between buttons */
+}
 .modal__container_type_delete {
   padding: 0;
   display: flex;
@@ -194,7 +193,6 @@
   opacity: 100%;
 }
 
-/*deleting image modal*/
 .modal__title_type_delete {
   margin-top: 32px;
   font-size: 24px;
