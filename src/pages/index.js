@@ -4,20 +4,23 @@ import {
   settings,
   resetValidation,
 } from "../scripts/validation.js"; // Importing validation functions
+import Api from "../utils/Api.js"; // Importing the API class
 
 // Importing images and other assets
 import logoPath from "../images/logo.svg";
 import avatarPath from "../images/avatar.jpg";
 import editButtonPath from "../images/editbtn.svg";
 import addButtonPath from "../images/addbtn.svg";
+import editLightButtonPath from "../images/editbtn-light.svg";
 
 document.querySelector(".header__logo").src = logoPath;
 document.querySelector(".profile__avatar").src = avatarPath;
 document.querySelector(".profile__edit-button img").src = editButtonPath;
 document.querySelector(".profile__add-button img").src = addButtonPath;
+document.querySelector(".profile__pencilIcon").src = editLightButtonPath;
 
 // Initial Cards
-const initialCards = [
+/* const initialCards = [
   {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
@@ -42,7 +45,26 @@ const initialCards = [
     name: "Mountain house",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
-];
+]; */
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "f1f1dbab-8e17-48d3-a098-d77dfd6ea3c5",
+    "Content-Type": "application/json",
+  },
+});
+
+api
+  .getInitialCards()
+  .then((cards) => {
+    // Render Initial Cards
+    cards.forEach((card) => {
+      const cardElement = getCardElement(card);
+      cardsList.append(cardElement);
+    });
+  })
+  .catch(console.error);
 
 // Profile Selectors
 const editModalButton = document.querySelector(".profile__edit-button");
@@ -163,6 +185,10 @@ function handleCardFormSubmit(evt) {
     link: imageURL,
   };
 
+  function disableButton(buttonElement, settings) {
+    buttonElement.disabled = true; // or any custom logic based on settings
+  }
+
   const img = new Image();
   img.src = imageURL;
   img.onload = () => {
@@ -196,9 +222,4 @@ cardModalButton.addEventListener("click", () => {
 editForm.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleCardFormSubmit);
 
-// Render Initial Cards
-initialCards.forEach((card) => {
-  const cardElement = getCardElement(card);
-  cardsList.append(cardElement);
-});
 enableValidation(settings);

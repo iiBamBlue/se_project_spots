@@ -5,11 +5,66 @@
   justify-content: center;
 }
 
+/* Container for the avatar and its edit button */
+.profile__avatar-container {
+  position: relative;
+  display: block;
+  height: 190px;
+  width: 190px;
+  cursor: pointer;
+}
+
+.profile__avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Make it invisible */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Optional: adds slight darkening effect on hover */
+}
+
+.profile__avatar-container:hover .profile__avatar-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Avatar image */
 .profile__avatar {
   margin-right: 20px;
   height: 190px;
   width: 190px;
   border-radius: 8px;
+  z-index: 1;
+}
+
+/* Avatar edit button */
+.profile__avatar-button {
+  position: absolute;
+  padding: 12px 10px; /* Button padding for a comfortable click area */
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex; /* Allows for gap usage */
+  gap: 8px; /* Space between icon and text */
+  align-items: center;
+  white-space: nowrap; /* Prevents text wrapping */
+  font-weight: 500;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.profile__avatar-container:hover .profile__avatar-button {
+  opacity: 1; /* This will make the button visible on hover */
 }
 
 /* container of Name Description and edit button*/
@@ -46,7 +101,6 @@
   max-width: 420px;
 }
 
-/*notes on this button are to keep track of the strange anomily, Dot-Bot's suggestion*/
 .profile__edit-button {
   margin-top: auto; /*by mimicing the add button with the margins i have gotten rid of the ghost padding and dont have to apply widths*/
   padding: 0; /*is keeping button in its corner */
