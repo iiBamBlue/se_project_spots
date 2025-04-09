@@ -169,6 +169,35 @@
         </div>
       </div>
 
+      <div class="modal" id="new-avatar-modal">
+        <div class="modal__container">
+          <button
+            type="button"
+            class="modal__close-button"
+            aria-label="Close modal"
+          ></button>
+          <h2 class="modal__title">Edit profile avatar</h2>
+          <form name="new-avatar-form" class="modal__form">
+            <label for="new-avatar-link-input" class="modal__label">
+              Profile Picture
+              <input
+                id="new-avatar-link-input"
+                type="url"
+                class="modal__input"
+                name="link"
+                placeholder="Paste a link to the picture"
+                required
+              />
+              <span
+                id="new-avatar-link-input-error"
+                class="modal__error"
+              ></span>
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
+        </div>
+      </div>
+
       <div class="modal" id="delete-modal">
         <div class="modal__container modal__container_type_delete">
           <button
