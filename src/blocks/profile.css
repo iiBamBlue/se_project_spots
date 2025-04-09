@@ -164,6 +164,7 @@
   .profile__avatar-container {
     height: 80px;
     width: 80px;
+    cursor: default;
   }
 
   .profile__avatar {
@@ -172,24 +173,23 @@
     width: 80px;
   }
 
+  .profile__avatar-container:hover .profile__avatar-overlay {
+    opacity: 0; /* Hide overlay on hover */
+  }
+
   .profile__avatar-button {
     margin-bottom: 4.66px;
     padding: 4px 4px;
     height: 23.34px;
     width: 23.34px;
-    opacity: 0;
+    opacity: 1;
     top: 52px;
     left: 63px;
     font-size: 0;
     border: none;
     border-radius: 8px;
-    background-color: #212121;
-    transition: background-color 0.5s;
-    cursor: pointer;
-  }
-
-  .profile__avatar-container:hover .profile__avatar-button {
-    opacity: 60%; /* This will make the button visible on hover */
+    background-color: rgba(33, 33, 33, 0.6);
+    cursor: default;
   }
 
   .profile__name {

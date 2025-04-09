@@ -75,6 +75,9 @@ const profileDescription = document.querySelector(".profile__description");
 // Modal Selectors
 const modals = document.querySelectorAll(".modal");
 const closeButtons = document.querySelectorAll(".modal__close-button");
+const deleteModal = document.querySelector("#delete-modal");
+const deleteForm = deleteModal.querySelector("#delete-form");
+const cancelDeleteButton = deleteModal.querySelector(".modal__cancel-button");
 
 // Modal - Edit Profile
 const editModal = document.querySelector("#edit-modal");
@@ -119,7 +122,9 @@ function getCardElement(data) {
   });
 
   cardDeleteButton.addEventListener("click", () => {
-    cardElement.remove();
+    openModal(deleteModal);
+    // Store the card element to be deleted
+    deleteForm._cardToDelete = cardElement;
   });
 
   cardImage.addEventListener("click", () => {
@@ -221,5 +226,13 @@ cardModalButton.addEventListener("click", () => {
 // Form Listeners
 editForm.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleCardFormSubmit);
+deleteForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  deleteForm._cardToDelete.remove();
+  closeModal(deleteModal);
+});
+cancelDeleteButton.addEventListener("click", () => {
+  closeModal(deleteModal);
+});
 
 enableValidation(settings);
