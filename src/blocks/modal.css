@@ -16,6 +16,7 @@
   /*keeps popup hidden until activated*/
   opacity: 0;
   transition: visibility 0.3s, opacity 0.3s ease-in;
+  z-index: 3;
 }
 
 /*when edit button is clicked pop up should initiate*/
@@ -171,13 +172,11 @@
 }
 
 /*-------modal for Deleting image----------*/
-#delete-form {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px; /* adds space between buttons */
-}
+
+/*contains delete modal*/
 .modal__container_type_delete {
   padding: 0;
+  max-width: 630px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -201,14 +200,15 @@
   justify-content: center;
 }
 
+/*contains both buttons*/
 .modal__button-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 .modal__submit-button_type_delete {
   margin-bottom: 32px;
+  margin-right: 10px;
   width: 156px;
   padding: 18px 52px;
   border: none;
@@ -227,6 +227,7 @@
 
 .modal__cancel-button {
   margin-bottom: 32px;
+  margin-left: 10px;
   width: 156px;
   padding: 18px 52px;
   border: none;
@@ -298,5 +299,41 @@
   .modal__caption {
     font-size: 16px;
     line-height: 1.2;
+  }
+  #delete-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Add this to center the buttons */
+  }
+
+  .modal__title_type_delete {
+    margin: 0 0 20px;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+  }
+
+  .modal__button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Add this to center the container */
+  }
+
+  .modal__submit-button_type_delete {
+    margin: 0 0 12px;
+    width: 156px;
+  }
+
+  .modal__cancel-button {
+    margin: 0;
+    width: 156px;
+  }
+
+  .modal__close-button_type_delete {
+    top: -50px;
+    right: 3px;
   }
 }
