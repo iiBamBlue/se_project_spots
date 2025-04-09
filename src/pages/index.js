@@ -5,6 +5,7 @@ import {
   resetValidation,
 } from "../scripts/validation.js"; // Importing validation functions
 import Api from "../utils/Api.js"; // Importing the API class
+import { handleSubmit, renderLoading } from "../utils/utils.js"; // Importing utility functions
 
 // Importing images and other assets
 import logoPath from "../images/logo.svg";
@@ -30,6 +31,10 @@ const api = new Api({
 let userId;
 
 // Get user info and cards
+api.getInitialCards().then((cards) => {
+  console.log("First card data:", JSON.stringify(cards[0], null, 2));
+});
+
 api
   .getUserInfo()
   .then((userData) => {
@@ -41,6 +46,7 @@ api
   })
   .then((cards) => {
     cards.forEach((card) => {
+      console.log("Cards received:", cards);
       const cardElement = getCardElement(card);
       cardsList.append(cardElement);
     });
@@ -90,6 +96,7 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
+  console.log("Complete card data:", JSON.stringify(data, null, 2));
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
@@ -101,42 +108,42 @@ function getCardElement(data) {
   const cardLikeCount = cardElement.querySelector(".card__like-count");
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
+  // Set card data
   cardTitle.textContent = data.name;
+  cardImage.src = data.link; // Make sure this line is present
   cardImage.alt = data.name;
-  cardImage.src = data.link;
 
   // Set initial like state and count
-  cardLikeCount.textContent = data.likes ? data.likes.length : 0;
-  if (data.likes && data.likes.some((like) => like._id === userId)) {
+  if (data.isLiked) {
     cardLikeButton.classList.add("card__like-button_liked");
+    cardLikeCount.textContent = "1"; // Set to 1 if the card is liked
+  } else {
+    cardLikeCount.textContent = "0"; // Set to 0 if the card is not liked
   }
 
   cardLikeButton.addEventListener("click", () => {
-    const isLiked = cardLikeButton.classList.contains(
+    const isCurrentlyLiked = cardLikeButton.classList.contains(
       "card__like-button_liked"
     );
-    const likeCardPromise = isLiked
+
+    const likeCardPromise = isCurrentlyLiked
       ? api.dislikeCard(data._id)
       : api.likeCard(data._id);
 
     likeCardPromise
       .then((updatedCard) => {
-        // Toggle the like button state
-        cardLikeButton.classList.toggle("card__like-button_liked");
-
-        // Get current count
-        let currentLikeCount = parseInt(cardLikeCount.textContent);
-
-        // Update count based on isLiked status
-        cardLikeCount.textContent = updatedCard.isLiked
-          ? currentLikeCount + 1
-          : currentLikeCount - 1;
+        cardLikeButton.classList.toggle(
+          "card__like-button_liked",
+          updatedCard.isLiked
+        );
+        cardLikeCount.textContent = updatedCard.isLiked ? "1" : "0";
       })
       .catch((error) => {
         console.error("Error updating like status:", error);
       });
   });
 
+  // delete and preview event listeners
   cardDeleteButton.addEventListener("click", () => {
     openModal(deleteModal);
     deleteForm._cardToDelete = cardElement;
@@ -181,14 +188,14 @@ function closeModal(modal) {
   document.removeEventListener("keydown", modal._handleEscapeKeyPress);
 }
 
-function renderLoading(
-  isLoading,
-  button,
-  buttonText = "Save",
-  loadingText = "Saving..."
-) {
-  button.textContent = isLoading ? loadingText : buttonText;
-}
+// function renderLoading(
+// isLoading,
+// button,
+// buttonText = "Save",
+// loadingText = "Saving..."
+// ) {
+// button.textContent = isLoading ? loadingText : buttonText;
+// }
 
 // Universal Close Button Handler
 closeButtons.forEach((button) => {
@@ -197,26 +204,23 @@ closeButtons.forEach((button) => {
 });
 
 // Handlers
-function handleEditFormSubmit(evt) {
-  evt.preventDefault();
-  const submitButton = editForm.querySelector(".modal__submit-button");
-  renderLoading(true, submitButton);
+function makeEditProfileRequest() {
+  // Get form values
+  const name = editModalNameInput.value;
+  const about = editModalDescriptionInput.value;
 
-  api
-    .editUserInfo({
-      // Changed from updateProfile to editUserInfo
-      name: editModalNameInput.value,
-      about: editModalDescriptionInput.value,
-    })
-    .then((userData) => {
-      profileName.textContent = userData.name;
-      profileDescription.textContent = userData.about;
-      closeModal(editModal);
-    })
-    .catch(console.error)
-    .finally(() => {
-      renderLoading(false, submitButton);
-    });
+  // Make API call to edit user info
+  return api.editUserInfo({ name, about }).then((userData) => {
+    // Update the DOM with the new user data
+    profileName.textContent = userData.name;
+    profileDescription.textContent = userData.about;
+    // Close the modal
+    closeModal(editModal);
+  });
+}
+
+function handleEditFormSubmit(evt) {
+  handleSubmit(makeEditProfileRequest, evt, "Saving...");
 }
 
 function handleCardFormSubmit(evt) {
