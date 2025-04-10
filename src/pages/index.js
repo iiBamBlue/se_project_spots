@@ -30,11 +30,6 @@ const api = new Api({
 
 let userId;
 
-// Get user info and cards
-api.getInitialCards().then((cards) => {
-  console.log("First card data:", JSON.stringify(cards[0], null, 2));
-});
-
 api
   .getUserInfo()
   .then((userData) => {
@@ -46,7 +41,6 @@ api
   })
   .then((cards) => {
     cards.forEach((card) => {
-      console.log("Cards received:", cards);
       const cardElement = getCardElement(card);
       cardsList.append(cardElement);
     });
@@ -96,7 +90,6 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
-  console.log("Complete card data:", JSON.stringify(data, null, 2));
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
@@ -283,7 +276,9 @@ deleteForm.addEventListener("submit", (evt) => {
   api
     .removeCard(deleteForm._cardToDelete._id) // Changed from deleteCard to removeCard
     .then(() => {
-      deleteForm._cardToDelete.remove();
+      handleSubmit(() => {
+        deleteForm._cardToDelete.remove();
+      });
       closeModal(deleteModal);
     })
     .catch(console.error)
