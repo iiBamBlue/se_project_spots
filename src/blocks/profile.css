@@ -5,11 +5,65 @@
   justify-content: center;
 }
 
+/* Container for the avatar and its edit button */
+.profile__avatar-container {
+  position: relative;
+  display: block;
+  height: 190px;
+  cursor: pointer;
+}
+
+.profile__avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Make it invisible */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Optional: adds slight darkening effect on hover */
+}
+
+.profile__avatar-container:hover .profile__avatar-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Avatar image */
 .profile__avatar {
   margin-right: 20px;
   height: 190px;
   width: 190px;
   border-radius: 8px;
+  z-index: 1;
+}
+
+/* Avatar edit button */
+.profile__avatar-button {
+  position: absolute;
+  padding: 12px 10px; /* Button padding for a comfortable click area */
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex; /* Allows for gap usage */
+  gap: 8px; /* Space between icon and text */
+  align-items: center;
+  white-space: nowrap; /* Prevents text wrapping */
+  font-weight: 500;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.profile__avatar-container:hover .profile__avatar-button {
+  opacity: 1; /* This will make the button visible on hover */
 }
 
 /* container of Name Description and edit button*/
@@ -28,6 +82,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
 }
@@ -41,12 +96,12 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 420px;
 }
 
-/*notes on this button are to keep track of the strange anomily, Dot-Bot's suggestion*/
 .profile__edit-button {
   margin-top: auto; /*by mimicing the add button with the margins i have gotten rid of the ghost padding and dont have to apply widths*/
   padding: 0; /*is keeping button in its corner */
@@ -105,10 +160,35 @@
     padding-top: 20px;
   }
 
+  .profile__avatar-container {
+    height: 80px;
+    width: 80px;
+    cursor: default;
+  }
+
   .profile__avatar {
     margin: 0 0 12px;
     height: 80px;
     width: 80px;
+  }
+
+  .profile__avatar-container:hover .profile__avatar-overlay {
+    opacity: 0; /* Hide overlay on hover */
+  }
+
+  .profile__avatar-button {
+    margin-bottom: 4.66px;
+    padding: 4px 4px;
+    height: 23.34px;
+    width: 23.34px;
+    opacity: 1;
+    top: 52px;
+    left: 63px;
+    font-size: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(33, 33, 33, 0.6);
+    cursor: default;
   }
 
   .profile__name {
