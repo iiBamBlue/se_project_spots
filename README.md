@@ -46,7 +46,7 @@ this webpage is deployed to GitHub Pages
 
 - #### Desktop View
 
-  ![Desktop View](./images/desktopbrowser.png)
+  ![Desktop View](/src/images/DesktopView.png)
 
 - #### Big Tablet View
 
@@ -58,7 +58,11 @@ this webpage is deployed to GitHub Pages
 
 - #### Mobile View
 
-  ![Mobile View](./images/appview.png)
+  ![Mobile View](/src/images/MobileView.png)
+
+  #### Photo Modal View
+
+  ! [Photo Modal View](/src/images/SpotsModal.png)
 
 ### **_Overview from Triple Ten_**
 
@@ -73,21 +77,3 @@ This project is made so all the elements are displayed correctly on popular scre
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-
-**Images**
-
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
-
-Good luck and have fun!
-
-### **_notes to self_**
-
-- content is cleaned and descriptions have been commented made a commit ready for submission
-- header has been cleaned and added descriptionss. commit sent. ready for submission
-- profile clean and descriptions added. commit sent. ready for submission
-- footer cleaned up and descriptions added. commit made. ready for submission
-- cards clean and descriptions added. commit sent ready for submission
-- card clean and descriptions added. commit sent. ready for submission
-- page cleaned and described. commit sent. ready for submission
-
-  ~~### - need to add video~~
