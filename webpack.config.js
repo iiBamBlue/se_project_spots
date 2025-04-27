@@ -46,6 +46,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.svg$/,
+        use: "file-loader",
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
       },
@@ -53,7 +57,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./index.html",
       favicon: "./src/images/favicon.ico", // path to the favicon
     }),
     new CleanWebpackPlugin(),
