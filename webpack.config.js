@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "main.js",
-    publicPath: "",
+    publicPath: "/se_project_spots/",
   },
 
   mode: "development",
@@ -46,10 +46,6 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg$/,
-        use: "file-loader",
-      },
-      {
         test: /\.(png|svg|jpg|jpeg|webp|gif|woff(2)?|eot|ttf|otf)$/,
         type: "asset/resource",
       },
@@ -57,7 +53,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: "./src/index.html",
       favicon: "./src/images/favicon.ico", // path to the favicon
     }),
     new CleanWebpackPlugin(),
