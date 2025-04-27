@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/iiBamBlue/se_project_spots/issues"
   },
-  "homepage": "https://github.com/iiBamBlue/se_project_spots#readme",
+  "homepage": "https://iibamblue.github.io/se_project_spots/",
   "devDependencies": {
     "@babel/core": "7.18.9",
     "@babel/preset-env": "7.18.9",
