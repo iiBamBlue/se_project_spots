@@ -51,7 +51,11 @@ A responsive web application showcasing a clean design and intuitive layout for 
 
 ## 🌐 **Deployment**
 
+<<<<<<< HEAD
 This project is live and deployed to GitHub Pages: [Visit Here](https://iibamblue.github.io/se_project_spots/)
+=======
+  ![Desktop View](/src/images/DesktopView.png)
+>>>>>>> project-9
 
 ---
 
@@ -67,7 +71,29 @@ This project is live and deployed to GitHub Pages: [Visit Here](https://iibamblu
 ## 🤝 **Contributions**
 Contributions are welcome! Feel free to fork the repository, make updates, and submit pull requests.
 
+<<<<<<< HEAD
 ---
 
 ## 📜 **License**
 This project is open-source and licensed under the [MIT License](LICENSE).
+=======
+  ![Mobile View](/src/images/MobileView.png)
+
+  #### Photo Modal View
+
+  ! [Photo Modal View](/src/images/SpotsModal.png)
+
+### **_Overview from Triple Ten_**
+
+- Intro
+- Figma
+- Images
+
+**Intro**
+
+This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.
+
+**Figma**
+
+- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+>>>>>>> project-9
