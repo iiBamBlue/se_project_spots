@@ -27,13 +27,15 @@
     "clean-webpack-plugin": "4.0.0",
     "css-loader": "6.7.1",
     "cssnano": "5.1.12",
+    "eslint": "^9.34.0",
     "gh-pages": "^6.3.0",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.6.1",
     "postcss-loader": "7.0.1",
+    "stylehacks": "^7.0.6",
     "webpack": "^5.99.2",
     "webpack-cli": "4.10.0",
-    "webpack-dev-server": "4.9.3"
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
     "core-js": "3.23.5"
