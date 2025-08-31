@@ -7,6 +7,7 @@ A responsive web application showcasing a clean design and intuitive layout for 
 ## 🚀 **Project Overview**
 
 ### **Responsive Design**
+
 - The app adapts seamlessly to various screen sizes:
   - **Mobile View (320px - 626px)**: Special profile layout with one card per row.
   - **Small Tablets (627px - 884px)**: Maintains a single card per row.
@@ -14,6 +15,7 @@ A responsive web application showcasing a clean design and intuitive layout for 
   - **Desktop View (1321px - 1440px)**: Features three cards per row, with a content restriction at 1440px for optimal readability.
 
 ### **Tech Highlights**
+
 - **Modal Design**: Includes an overlay, a content area, and a close button for enhanced user interaction.
 - **validateURL Function**: Checks input against a URL pattern and displays error messages for invalid entries.
 - **Responsive Hover Effects**: Adds interactive animations to enhance user experience.
@@ -31,6 +33,7 @@ A responsive web application showcasing a clean design and intuitive layout for 
 ---
 
 ## 🎯 **Key Features**
+
 - **Responsive Layout**: Designed for all popular screen sizes, from mobile to desktop.
 - **Clean User Interface**: Focused on accessibility and simplicity.
 - **Interactive Modals**: Engages users with an overlay and smooth close interactions.
@@ -51,17 +54,14 @@ A responsive web application showcasing a clean design and intuitive layout for 
 
 ## 🌐 **Deployment**
 
-<<<<<<< HEAD
 This project is live and deployed to GitHub Pages: [Visit Here](https://iibamblue.github.io/se_project_spots/)
-=======
-  ![Desktop View](/src/images/DesktopView.png)
->>>>>>> project-9
 
 ---
 
 ## 📸 **Sneak Peek**
 
 ### Views:
+
 - **Desktop View**: Optimized for larger screens with a three-card layout.
 - **Tablet Views**: Features a two-card or one-card layout based on screen size.
 - **Mobile View**: Single-card layout with a special profile design.
@@ -69,19 +69,14 @@ This project is live and deployed to GitHub Pages: [Visit Here](https://iibamblu
 ---
 
 ## 🤝 **Contributions**
+
 Contributions are welcome! Feel free to fork the repository, make updates, and submit pull requests.
 
-<<<<<<< HEAD
----
+![Mobile View](/src/images/MobileView.png)
 
-## 📜 **License**
-This project is open-source and licensed under the [MIT License](LICENSE).
-=======
-  ![Mobile View](/src/images/MobileView.png)
+#### Photo Modal View
 
-  #### Photo Modal View
-
-  ! [Photo Modal View](/src/images/SpotsModal.png)
+! [Photo Modal View](/src/images/SpotsModal.png)
 
 ### **_Overview from Triple Ten_**
 
@@ -96,4 +91,3 @@ This project is made so all the elements are displayed correctly on popular scre
 **Figma**
 
 - [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
->>>>>>> project-9
