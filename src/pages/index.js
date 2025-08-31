@@ -14,6 +14,9 @@ import editButtonPath from "../images/editbtn.svg";
 import addButtonPath from "../images/addbtn.svg";
 import editLightButtonPath from "../images/editbtn-light.svg";
 
+// Ensure smalltabletview.png is copied to dist
+import "./_copy_smalltabletview.js";
+
 document.querySelector(".header__logo").src = logoPath;
 document.querySelector(".profile__avatar").src = avatarPath;
 document.querySelector(".profile__edit-button img").src = editButtonPath;
