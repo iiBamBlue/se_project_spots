@@ -35,7 +35,7 @@
     "stylehacks": "^7.0.6",
     "webpack": "^5.99.2",
     "webpack-cli": "4.10.0",
-  "webpack-dev-server": "^5.2.2"
+    "webpack-dev-server": "^5.2.2"
   },
   "dependencies": {
     "core-js": "3.23.5"

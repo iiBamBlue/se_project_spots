@@ -49,10 +49,16 @@ api
     return api.getInitialCards();
   })
   .then((cards) => {
-    cards.forEach((card) => {
-      const cardElement = getCardElement(card);
-      cardsList.append(cardElement);
-    });
+    if (cardsList && Array.isArray(cards)) {
+      cards.forEach((card) => {
+        const cardElement = getCardElement(card);
+        if (cardElement) {
+          cardsList.append(cardElement);
+        }
+      });
+    } else {
+      console.error("Cards list element not found or cards data is invalid");
+    }
   })
   .catch(handleApiError);
 
@@ -97,6 +103,11 @@ const cardTemplate = document.querySelector("#card-template");
 const cardsList = document.querySelector(".cards__list");
 
 function getCardElement(data) {
+  if (!cardTemplate) {
+    console.error("Card template not found");
+    return null;
+  }
+  
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
@@ -108,17 +119,26 @@ function getCardElement(data) {
   const cardLikeCount = cardElement.querySelector(".card__like-count");
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
 
-  // Set card data
-  cardTitle.textContent = data.name;
-  cardImage.src = data.link; // Make sure this line is present
-  cardImage.alt = data.name;
+  // Set card data with null checks
+  if (cardTitle) cardTitle.textContent = data.name;
+  if (cardImage) {
+    cardImage.src = data.link;
+    cardImage.alt = data.name;
+    
+    // Add error handling for failed image loads
+    cardImage.onerror = function() {
+      console.error("Failed to load image:", data.link);
+      this.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23f0f0f0'/%3E%3Ctext x='50' y='50' text-anchor='middle' dy='.3em'%3EImage not found%3C/text%3E%3C/svg%3E";
+    };
+  }
 
-  // Set initial like state and count
-  if (data.isLiked) {
+  // Set initial like state and count - use actual likes array length
+  const likesCount = data.likes ? data.likes.length : 0;
+  const isLikedByUser = data.likes && data.likes.some(like => like._id === userId);
+  
+  if (cardLikeCount) cardLikeCount.textContent = likesCount.toString();
+  if (cardLikeButton && isLikedByUser) {
     cardLikeButton.classList.add("card__like-button_liked");
-    cardLikeCount.textContent = "1"; // Set to 1 if the card is liked
-  } else {
-    cardLikeCount.textContent = "0"; // Set to 0 if the card is not liked
   }
 
   cardLikeButton.addEventListener("click", () => {
@@ -132,11 +152,11 @@ function getCardElement(data) {
 
     likeCardPromise
       .then((updatedCard) => {
-        cardLikeButton.classList.toggle(
-          "card__like-button_liked",
-          updatedCard.isLiked
-        );
-        cardLikeCount.textContent = updatedCard.isLiked ? "1" : "0";
+        const isLiked = updatedCard.likes && updatedCard.likes.some(like => like._id === userId);
+        const likesCount = updatedCard.likes ? updatedCard.likes.length : 0;
+        
+        cardLikeButton.classList.toggle("card__like-button_liked", isLiked);
+        cardLikeCount.textContent = likesCount.toString();
       })
       .catch((error) => {
         handleApiError(error);
@@ -312,7 +332,7 @@ avatarForm.addEventListener("submit", (evt) => {
       avatar: avatarLinkInput.value,
     })
     .then((userData) => {
-      profileAvatar.src = userData.avatar;
+      if (profileAvatarElement) profileAvatarElement.src = userData.avatar;
       evt.target.reset();
       closeModal(avatarModal);
     })
