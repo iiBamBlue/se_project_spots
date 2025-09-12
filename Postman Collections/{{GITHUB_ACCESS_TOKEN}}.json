@@ -1,0 +1,2699 @@
+{
+	"info": {
+		"_postman_id": "5e407dad-cf2b-46b9-acf3-b15266bb9df7",
+		"name": "Claude API",
+		"description": "<img src=\"https://content.pstmn.io/37bcecd6-cbf7-4dad-b07d-84eb07bf7ca6/YW50aHJvcGljLWhlYWRlci5wbmc=\">\n\n# The Claude API\n\nThe Claude API provides developers with access to advanced conversational AI capabilities developed by Anthropic. It offers endpoints for tasks such as message generation, conversation continuation, and sentiment analysis, empowering developers to integrate sophisticated AI-driven interactions into their applications.\n\n# Getting Started\n\n#### Step 1: Fork the Collection and Environment\n\nFork the Collection and Environment by clicking the Run in Postman button  \n[<img src=\"https://run.pstmn.io/button.svg\" alt=\"Run In Postman\">](https://god.gw.postman.com/run-collection/25426789-3b3f799b-b394-4374-aae4-3e07725126e6?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D25426789-3b3f799b-b394-4374-aae4-3e07725126e6%26entityType%3Dcollection%26workspaceId%3D706a4b1d-a21d-404b-b156-72fb2c800086#?env%5BAnthropic%20-%20Claude%5D=W3sia2V5IjoiYmFzZVVybCIsInZhbHVlIjoiaHR0cHM6Ly9hcGkuYW50aHJvcGljLmNvbSIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJkZWZhdWx0Iiwic2Vzc2lvblZhbHVlIjoiaHR0cHM6Ly9hcGkuYW50aHJvcGljLmNvbSIsImNvbXBsZXRlU2Vzc2lvblZhbHVlIjoiaHR0cHM6Ly9hcGkuYW50aHJvcGljLmNvbSIsInNlc3Npb25JbmRleCI6MH0seyJrZXkiOiJ2ZXJzaW9uIiwidmFsdWUiOiJ2MSIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJkZWZhdWx0Iiwic2Vzc2lvblZhbHVlIjoidjEiLCJjb21wbGV0ZVNlc3Npb25WYWx1ZSI6InYxIiwic2Vzc2lvbkluZGV4IjoxfV0=)  \n_OR_ fork the collection manually and include the `Anthropic - Claude` environment\n\n<img src=\"https://content.pstmn.io/a98ac6ad-d0b5-4031-82c0-bb9c92e34758/MjAyNS0wMS0yMiAxMS4zNy4wOS5naWY=\">\n\n#### Step 2: Sign up for an account\n\nCreate an Anthropic account via the web [Console](https://console.anthropic.com/) or sign in to an existing one.\n\n#### Step 3: Generate an API key\n\nTo develop with Claude, an API key is needed. Here’s how to generate one:\n\n1. Log in to the [Console](https://console.anthropic.com/).\n    \n2. Navigate to the API Keys section within [Account Settings](https://console.anthropic.com/settings/keys).\n    \n3. Click the Create Key button on the top right.\n    \n4. Give the key a descriptive name (e.g., “My_First_Claude_App”) and click Create Key.\n    \n5. Copy the generated API key and store it in a secure location. Note that the key cannot be viewed again once users leave this page, so it should be saved somewhere safe.\n    \n\n#### Step 4: Configure the API Key in Postman\n\nPostman provides you with a [Vault](https://learning.postman.com/docs/sending-requests/postman-vault/postman-vault-secrets/) that let's you store sensitive data locally. Data stored in this vault is not synced with Postman Cloud and can only be accessed in your local Postman Instance.\n\nUsing the table below as a guide, add your keys to your vault. A reference to a secret `{{vault:anthropic-secret-key}}}` has been added to the [collection authorization tab](https://www.postman.com/devrel/openai/collection/k25n3c8/chatgpt-api?tab=authorization) as a Bearer token to be automatically used with all requests in this workspace. If you do not use the same key variable name in your vault, please update the authorization tab accordingly.\n\n| **Key** | Value | Allowed Domains |\n| --- | --- | --- |\n| `anthropic-secret-key` | your_key_value | [https://api.anthropic.com](https://api.anthropic.com) |\n\n#### Step 5: Variables\n\nFamiliarize yourself with the collection and environment level variables. Be sure to set the Environment dropdown on the top right to use the provided Environment, `Anthropic - Claude` before running your first request.\n\n<img src=\"https://content.pstmn.io/837ad1d6-fab8-4cc2-947c-2fc0cbe769fc/ZW52X2FudGhyb3BpYy5naWY=\">\n\n---\n\n### **Reference**\n\n- Messages\n    \n    - [Single User Message](https://www.postman.com/postman/anthropic-apis/request/b7wpvdq/single-user-message?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Partially Filled Response Message](https://www.postman.com/postman/anthropic-apis/request/w5klyd4/partially-filled-response-message?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Multiple Conversational Turns](https://www.postman.com/postman/anthropic-apis/request/va612ov/multiple-conversational-turns?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Using Claude to Analyze Images](https://www.postman.com/postman/anthropic-apis/request/5dmpwjg/using-claude-to-analyze-images?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Messages Using Tools](https://www.postman.com/postman/anthropic-apis/request/zekuofq/messages-using-tools?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Count Message Tokens](https://www.postman.com/postman/anthropic-apis/request/o401fd3/count-message-tokens?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Prompt Caching](https://www.postman.com/postman/anthropic-apis/request/8p3i0ev/prompt-caching?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n- Models\n    \n    - [List Models](https://www.postman.com/postman/anthropic-apis/request/1e1imro/list-models?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Get Model](https://www.postman.com/postman/anthropic-apis/request/tun6hcm/get-model?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n- Batch Messages\n    \n    - [Create Message Batch](https://www.postman.com/postman/anthropic-apis/request/92b21yw/create-message-batch?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Get Message Batch](https://www.postman.com/postman/anthropic-apis/request/jlphtcf/get-message-batch?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Get Message Batch Result](https://www.postman.com/postman/anthropic-apis/request/auoux38/get-message-batch-result?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [List Message Batches](https://www.postman.com/postman/anthropic-apis/request/z2miqd1/list-message-batches?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Cancel Message Batch](https://www.postman.com/postman/anthropic-apis/request/yx3ohcz/cancel-message-batch?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n    - [Delete Message Batch](https://www.postman.com/postman/anthropic-apis/request/lrxoeoz/delete-message-batch?action=share&source=copy-link&creator=40440015&ctx=documentation)\n        \n\n---\n\n---\n\n## Ask for help\n\nWe want you to get the best support you can when working with this workspace. If you're stuck and you need help regarding Anthropic specific issues, we recommend that you explore the following channels:\n\n- [Anthropic help center](https://support.anthropic.com/en/)\n    \n- [Anthropic discord community](https://discord.com/invite/zkrBaqytPW)\n    \n\nFor Postman specific questions or feedback about this workspace:\n\n- [Postman's Community Forum](https://community.postman.com/t/ai-provider-workspaces-and-collections/74143) - Provide feedback and ask questions about this workspace, ask general Postman questions, understand how to use a feature, how to build a workflow, etc.\n    \n\nFor Postman specific issues:\n\n- [Postman Github Issues](https://github.com/postmanlabs/postman-app-support) - Submit feature requests, bug reports, etc here",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Single user message",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8c5041ed-10c1-461b-a159-bd89a0e871e4",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Validate the response schema for id, type, role, model, content, stop_reason, stop_sequence, and usage\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.id).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.type).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.role).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.model).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.content).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.stop_reason).to.exist;",
+									"    pm.expect(responseData.stop_sequence).to.be.null;",
+									"    pm.expect(responseData.usage).to.exist.and.to.be.an('object');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Ensure the content array contains at least one element with type and text fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.content).to.be.an('array');",
+									"    responseData.content.forEach(function (element) {",
+									"        pm.expect(element).to.be.an('object');",
+									"        pm.expect(element.type).to.exist.and.to.be.a('string');",
+									"        pm.expect(element.text).to.exist.and.to.be.a('string');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify that usage object contains input_tokens, cache_creation_input_tokens, cache_read_input_tokens, and output_tokens\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.usage).to.be.an('object');",
+									"    pm.expect(responseData.usage).to.have.property('input_tokens');",
+									"    pm.expect(responseData.usage).to.have.property('cache_creation_input_tokens');",
+									"    pm.expect(responseData.usage).to.have.property('cache_read_input_tokens');",
+									"    pm.expect(responseData.usage).to.have.property('output_tokens');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "99e36f28-2077-44bc-bb7c-6306bb7b3c94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"Hello, world\"\n        }\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages"
+					},
+					"response": [
+						{
+							"id": "33f58738-82de-4a41-bf0d-a0e1e56005ca",
+							"name": "Send a Message to Claude",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"claude-3-opus-20240229\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\"role\": \"user\", \"content\": \"Hello, world\"}\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 00:11:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T00:11:55Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "20000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "20000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T00:11:55Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "4000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "4000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T00:11:55Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "24000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "24000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T00:11:55Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01SfDAdfC8brZXMTdXjQCZUL"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8ff873d05fa4091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01JHxbjBNcZG9hMDo4sqKHhn\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-opus-20240229\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"Hello! How can I assist you today?\"\n        }\n    ],\n    \"stop_reason\": \"end_turn\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 10,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 12\n    }\n}"
+						},
+						{
+							"id": "b4fddc59-5751-483b-b13a-13fd02e9de59",
+							"name": "Send a Message to Claude",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\"role\": \"user\", \"content\": \"Hello, world\"}\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 00:17:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T00:17:24Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T00:17:23Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T00:17:23Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T00:17:23Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_014teawiYdS9JvEdkKNYnp22"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8ff87bd8397a091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01NddpM6G8X8FM6raDj5wLKL\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"Hi! Nice to meet you. How can I help you today?\"\n        }\n    ],\n    \"stop_reason\": \"end_turn\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 10,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 17\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Partially-filled response message",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51ca0b7e-815f-4ac0-8722-849309531821",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('id');",
+									"    pm.expect(responseData).to.have.property('type');",
+									"    pm.expect(responseData).to.have.property('role');",
+									"    pm.expect(responseData).to.have.property('model');",
+									"    pm.expect(responseData).to.have.property('content');",
+									"    pm.expect(responseData).to.have.property('stop_reason');",
+									"    pm.expect(responseData).to.have.property('usage');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Each content object has type and text fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.content).to.be.an('array');",
+									"    responseData.content.forEach(function(contentObj) {",
+									"        pm.expect(contentObj).to.have.property('type').that.is.a('string');",
+									"        pm.expect(contentObj).to.have.property('text').that.is.a('string');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Stop_sequence is either null or a number\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.stop_sequence).to.satisfy((value) => value === null || typeof value === 'number');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "cf9b60f4-41db-4cf4-be5c-da23eb10230e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": 1,\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"What is latin for Ant? (A) Apoidea, (B) Rhopalocera, (C) Formicidae\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"The answer is (\"\n        }\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages"
+					},
+					"response": [
+						{
+							"id": "1def497b-b56c-42e5-a25c-8579494748e3",
+							"name": "Putting words in Claude's mouth",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": 1,\n    \"messages\": [\n        {\"role\": \"user\", \"content\": \"What is latin for Ant? (A) Apoidea, (B) Rhopalocera, (C) Formicidae\"},\n        {\"role\": \"assistant\", \"content\": \"The answer is (\"}\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 00:18:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T00:18:53Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T00:18:52Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T00:18:52Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T00:18:52Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01AhQwgCEaGA8p5sgJGQTjar"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8ff87e03c897091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01SitDKyu1GrJJdDSWnQhBTc\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"C\"\n        }\n    ],\n    \"stop_reason\": \"max_tokens\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 43,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Multiple conversational turns",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "96f11690-c1bb-4d4e-bea1-52f9c9b763a0",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.include.all.keys('id', 'type', 'role', 'model', 'content', 'stop_reason', 'usage');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the content array has at least one element with type and text properties\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.content).to.be.an('array').that.is.not.empty;",
+									"    ",
+									"    responseData.content.forEach(function(element) {",
+									"        pm.expect(element).to.have.property('type').that.is.a('string');",
+									"        pm.expect(element).to.have.property('text').that.is.a('string');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Ensure that stop_sequence is either null or a number\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.stop_sequence).to.satisfy((value) => value === null || typeof value === 'number');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "273fd7a5-cfa6-40fe-9101-5d6d1fae245d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"Hello there.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"Hi, I'm Claude. How can I help you?\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Can you explain LLMs in plain English?\"\n        }\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages"
+					},
+					"response": [
+						{
+							"id": "aa26a986-e68e-438d-8eef-2a898bfcac02",
+							"name": "Partially-filled response message Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"Hello there.\"\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"Hi, I'm Claude. How can I help you?\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": \"Can you explain LLMs in plain English?\"\n        }\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 19:57:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T19:57:53Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T19:57:57Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T19:57:57Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T19:57:57Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_014sYNQCt51cabhUKJdRCs4F"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fff3d10c816091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01C4KwmWdKJDXrvvSSYsPYi2\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"Let me explain LLMs (Large Language Models) in simple terms:\\n\\nAn LLM is like a very sophisticated pattern-matching system that has been trained on massive amounts of text from the internet, books, and other sources. Think of it as having \\\"read\\\" billions of pages of text and learned the patterns of how human language works.\\n\\nKey points:\\n1. It learns how words typically follow each other\\n2. It understands context and can predict what text might come next in a sequence\\n3. It can recognize patterns in how humans communicate and respond accordingly\\n\\nA useful analogy might be: Imagine someone who has read almost every book ever written and has an amazing memory. When you ask them something, they can draw on all that knowledge to form relevant responses - but they're not actually \\\"thinking\\\" in the way humans do. They're using pattern recognition to generate appropriate responses based on their training.\\n\\nI am an LLM, and while I can engage in conversations and help with tasks, I don't actually \\\"understand\\\" things the way humans do - I'm using sophisticated pattern matching to generate appropriate responses.\"\n        }\n    ],\n    \"stop_reason\": \"end_turn\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 38,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 236\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Using Claude to Analyze Images",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "bf73719e-68b7-4047-87df-8c79fec9ba0a",
+								"exec": [
+									"// Define the image URL",
+									"const image1_url = \"https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg\";",
+									"const image1_media_type = \"image/jpeg\"; // Define the media type",
+									"",
+									"// Function to fetch the image and encode it to Base64",
+									"pm.sendRequest({",
+									"    url: image1_url,",
+									"    method: \"GET\",",
+									"    responseType: \"arraybuffer\" // Fetch the image as binary data",
+									"}, function (err, response) {",
+									"    if (err) {",
+									"        console.error(\"Error fetching the image:\", err);",
+									"        return;",
+									"    }",
+									"",
+									"    // Convert the binary data to a Base64 string",
+									"    const base64String = Buffer.from(response.stream).toString(\"base64\");",
+									"",
+									"    // Save the media type and Base64 data as collection variables for use in your request",
+									"    pm.collectionVariables.set(\"image_base_64\", base64String);",
+									"    pm.collectionVariables.set(\"media_type\", image1_media_type);",
+									"",
+									"    console.log(\"Base64 encoding successful!\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "804243b1-e731-431e-82fb-8608acc5a6eb",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('id');",
+									"    pm.expect(responseData).to.have.property('type');",
+									"    pm.expect(responseData).to.have.property('role');",
+									"    pm.expect(responseData).to.have.property('model');",
+									"    pm.expect(responseData).to.have.property('content');",
+									"    pm.expect(responseData).to.have.property('stop_reason');",
+									"    pm.expect(responseData).to.have.property('stop_sequence');",
+									"    pm.expect(responseData).to.have.property('usage');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Each content object has the required fields - type and text\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.content).to.be.an('array');",
+									"    responseData.content.forEach(function (contentObj) {",
+									"        pm.expect(contentObj).to.have.property('type');",
+									"        pm.expect(contentObj).to.have.property('text');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify stop_sequence is either null or a non-negative integer\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.stop_sequence).to.satisfy(val => val === null || (Number.isInteger(val) && val >= 0));",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "816fddfa-d832-4b23-b69a-f4efaa5aafb4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"image\",\n                    \"source\": {\n                        \"type\": \"base64\",\n                        \"media_type\": \"{{media_type}}\",\n                        \"data\": \"{{image_base_64}}\"\n                    }\n                },\n                {\n                    \"type\": \"text\",\n                    \"text\": \"What is in the above image?\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages"
+					},
+					"response": [
+						{
+							"id": "255f83fa-01bd-4aa3-a46e-989d64238798",
+							"name": "Using Claude to Analyze Images",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"max_tokens\": {{max_tokens}},\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"image\",\n                    \"source\": {\n                        \"type\": \"base64\",\n                        \"media_type\": \"{{media_type}}\",\n                        \"data\": \"{{image_base_64}}\"\n                    }\n                },\n                {\n                    \"type\": \"text\",\n                    \"text\": \"What is in the above image?\"\n                }\n            ]\n        }\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 00:50:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T00:50:51Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T00:50:53Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T00:50:53Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T00:50:53Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01VVNXrFfmqjs1zYUW2oa7Ya"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8ff8acce6d6d091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01XMeroR3ZEb9TJVbL4iJb3C\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"This is a detailed macro photograph of an ant. The image captures the ant in sharp detail, showing its segmented body, long legs, and antennae. The ant appears to be a carpenter ant or similar large species, with a dark, possibly black coloring. The photo is taken from a side angle with a shallow depth of field, creating a soft, blurred background while keeping the ant in crisp focus. The ant is standing on what appears to be a textured surface, possibly wood or stone.\"\n        }\n    ],\n    \"stop_reason\": \"end_turn\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 1554,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 108\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Messages - using tools",
+					"id": "47a1c2bb-923a-4a22-a221-f5bcbd53f641",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"tools\": [\n        {\n            \"name\": \"get_weather\",\n            \"description\": \"Get the current weather in a given location\",\n            \"input_schema\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"location\": {\n                        \"type\": \"string\",\n                        \"description\": \"The city and state, e.g. San Francisco, CA\"\n                    },\n                    \"unit\": {\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"celsius\",\n                            \"fahrenheit\"\n                        ],\n                        \"description\": \"The unit of temperature, either \\\"celsius\\\" or \\\"fahrenheit\\\"\"\n                    }\n                },\n                \"required\": [\n                    \"location\"\n                ]\n            }\n        }\n    ],\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"What is the weather like in San Francisco?\"\n        }\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages"
+					},
+					"response": [
+						{
+							"id": "3c1d4ea3-6f77-405e-940f-939992089ff7",
+							"name": "Messages - using tools",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"tools\": [\n        {\n            \"name\": \"get_weather\",\n            \"description\": \"Get the current weather in a given location\",\n            \"input_schema\": {\n                \"type\": \"object\",\n                \"properties\": {\n                    \"location\": {\n                        \"type\": \"string\",\n                        \"description\": \"The city and state, e.g. San Francisco, CA\"\n                    },\n                    \"unit\": {\n                        \"type\": \"string\",\n                        \"enum\": [\n                            \"celsius\",\n                            \"fahrenheit\"\n                        ],\n                        \"description\": \"The unit of temperature, either \\\"celsius\\\" or \\\"fahrenheit\\\"\"\n                    }\n                },\n                \"required\": [\n                    \"location\"\n                ]\n            }\n        }\n    ],\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": \"What is the weather like in San Francisco?\"\n        }\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 22:57:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T22:56:58Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T22:57:01Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T22:57:01Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T22:57:01Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01TwxywcawptX4t8BvbqjCEy"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "900043669ab1091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01RsHe8pMcDA3LHtPr6JVtmf\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"I'll help you check the current weather in San Francisco, CA.\"\n        },\n        {\n            \"type\": \"tool_use\",\n            \"id\": \"toolu_01228vFLdDfciYMXaT2rZUR7\",\n            \"name\": \"get_weather\",\n            \"input\": {\n                \"location\": \"San Francisco, CA\"\n            }\n        }\n    ],\n    \"stop_reason\": \"tool_use\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 442,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 71\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Count message tokens",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "bf73719e-68b7-4047-87df-8c79fec9ba0a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "804243b1-e731-431e-82fb-8608acc5a6eb",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content-Type header is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required field - input_tokens\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.have.property('input_tokens');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Input_tokens is a non-negative integer\", function () {",
+									"  const responseData = pm.response.json();",
+									"",
+									"  pm.expect(responseData.input_tokens).to.be.a('number');",
+									"  pm.expect(responseData.input_tokens).to.be.at.least(0);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "d17462e2-c380-42ad-8377-05972c622e33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"messages\": [\n        {\"role\": \"user\", \"content\": \"Hello, world\"}\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/count_tokens"
+					},
+					"response": [
+						{
+							"id": "2c3ea96e-ce23-46fe-a88c-6db12aec7f90",
+							"name": "Count message tokens",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{model}}\",\n    \"messages\": [\n        {\"role\": \"user\", \"content\": \"Hello, world\"}\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/count_tokens"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:39:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "19"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01PY57Kvjc1UMuoF9vhSJH22"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffd192c8f2091d-LAX"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"input_tokens\": 10\n}"
+						}
+					]
+				},
+				{
+					"name": "Prompt caching",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "bf73719e-68b7-4047-87df-8c79fec9ba0a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "804243b1-e731-431e-82fb-8608acc5a6eb",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Validate the response schema for required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.id).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.type).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.role).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.model).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.content).to.exist.and.to.be.an('array');",
+									"    pm.expect(responseData.stop_reason).to.exist;",
+									"    pm.expect(responseData.usage).to.exist.and.to.be.an('object');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content array is present and contains the expected number of elements\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.have.property('content').that.is.an('array');",
+									"    pm.expect(responseData.content.length).to.equal(1);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Type and text within content array are non-empty strings\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.content).to.be.an('array');",
+									"    responseData.content.forEach(function(item) {",
+									"        pm.expect(item.type).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Type should not be empty\");",
+									"        pm.expect(item.text).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Text should not be empty\");",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "b6405bdf-c894-4273-b210-24c3c5c79d21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"system\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"You are a highly knowledgeable assistant specializing in the solar system. Your role is to provide accurate, concise, and engaging answers to any questions about planets, moons, stars, comets, asteroids, and other celestial phenomena in the solar system. When answering, use clear and accessible language suitable for a general audience. Include relevant details and interesting facts, but avoid overwhelming with excessive technical jargon. If appropriate, offer comparisons or analogies to make concepts easier to understand. Acknowledge when a question is beyond the scope of current scientific knowledge. Examples of topics you can discuss: Physical and atmospheric characteristics of planets and moons; Differences between celestial objects (e.g., comets vs. asteroids); The history and structure of the solar system; Space exploration missions and discoveries related to the solar system. If a user asks about a specific planet, moon, or phenomenon, focus your response on that subject while providing context as needed. You are always polite, enthusiastic, and eager to share your knowledge of the wonders of the solar system.\",\n            \"cache_control\": {\n                \"type\": \"ephemeral\"\n            }\n        }\n    ],\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"Hello, can you tell me more about the solar system?\",\n                    \"cache_control\": {\n                        \"type\": \"ephemeral\"\n                    }\n                }\n            ]\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"Certainly! The solar system is the collection of celestial bodies that orbit our Sun. It consists of eight planets, numerous moons, asteroids, comets, and other objects. The planets, in order from closest to farthest from the Sun, are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Each planet has its own unique characteristics and features. Is there a specific aspect of the solar system you would like to know more about?\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"Tell me more about Mars.\",\n                    \"cache_control\": {\n                        \"type\": \"ephemeral\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages"
+					},
+					"response": [
+						{
+							"id": "7092ffea-971b-4f88-9108-486c37389cc9",
+							"name": "Prompt caching",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"model\": \"{{model}}\",\n    \"max_tokens\": {{max_tokens}},\n    \"system\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"You are a highly knowledgeable assistant specializing in the solar system. Your role is to provide accurate, concise, and engaging answers to any questions about planets, moons, stars, comets, asteroids, and other celestial phenomena in the solar system. When answering, use clear and accessible language suitable for a general audience. Include relevant details and interesting facts, but avoid overwhelming with excessive technical jargon. If appropriate, offer comparisons or analogies to make concepts easier to understand. Acknowledge when a question is beyond the scope of current scientific knowledge. Examples of topics you can discuss: Physical and atmospheric characteristics of planets and moons; Differences between celestial objects (e.g., comets vs. asteroids); The history and structure of the solar system; Space exploration missions and discoveries related to the solar system. If a user asks about a specific planet, moon, or phenomenon, focus your response on that subject while providing context as needed. You are always polite, enthusiastic, and eager to share your knowledge of the wonders of the solar system.\",\n            \"cache_control\": {\n                \"type\": \"ephemeral\"\n            }\n        }\n    ],\n    \"messages\": [\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"Hello, can you tell me more about the solar system?\",\n                    \"cache_control\": {\n                        \"type\": \"ephemeral\"\n                    }\n                }\n            ]\n        },\n        {\n            \"role\": \"assistant\",\n            \"content\": \"Certainly! The solar system is the collection of celestial bodies that orbit our Sun. It consists of eight planets, numerous moons, asteroids, comets, and other objects. The planets, in order from closest to farthest from the Sun, are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Each planet has its own unique characteristics and features. Is there a specific aspect of the solar system you would like to know more about?\"\n        },\n        {\n            \"role\": \"user\",\n            \"content\": [\n                {\n                    \"type\": \"text\",\n                    \"text\": \"Tell me more about Mars.\",\n                    \"cache_control\": {\n                        \"type\": \"ephemeral\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 23:33:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-limit",
+									"value": "50"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-remaining",
+									"value": "49"
+								},
+								{
+									"key": "anthropic-ratelimit-requests-reset",
+									"value": "2025-01-10T23:33:53Z"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-limit",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-remaining",
+									"value": "40000"
+								},
+								{
+									"key": "anthropic-ratelimit-input-tokens-reset",
+									"value": "2025-01-10T23:33:57Z"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-limit",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-remaining",
+									"value": "8000"
+								},
+								{
+									"key": "anthropic-ratelimit-output-tokens-reset",
+									"value": "2025-01-10T23:33:57Z"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-limit",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-remaining",
+									"value": "48000"
+								},
+								{
+									"key": "anthropic-ratelimit-tokens-reset",
+									"value": "2025-01-10T23:33:57Z"
+								},
+								{
+									"key": "request-id",
+									"value": "req_018L2Zd2NyXKgZdsxTj1dt8N"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "90007977bd20091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msg_01ApEXf4ytLPL4uYotijqUUh\",\n    \"type\": \"message\",\n    \"role\": \"assistant\",\n    \"model\": \"claude-3-5-sonnet-20241022\",\n    \"content\": [\n        {\n            \"type\": \"text\",\n            \"text\": \"Mars, often called the \\\"Red Planet\\\" due to its rusty color, is the fourth planet from the Sun and Earth's neighbor. Here are some fascinating facts about Mars:\\n\\nKey Features:\\n- About half the size of Earth\\n- Has two small moons: Phobos and Deimos\\n- Contains the largest known volcano in the solar system, Olympus Mons\\n- Features a giant canyon system, Valles Marineris, which is as long as the United States\\n\\nEnvironment:\\n- Thin atmosphere, mostly carbon dioxide\\n- Average temperature around -63°C (-82°F)\\n- Experiences dust storms that can cover the entire planet\\n- Has polar ice caps made of water ice and frozen carbon dioxide\\n\\nEvidence of Water:\\n- Scientists have found strong evidence of liquid water in Mars' past\\n- Contains frozen water in its polar ice caps\\n- Shows signs of possible seasonal liquid water flows\\n\\nExploration:\\n- One of the most explored planets in our solar system\\n- Multiple successful rover missions (including Curiosity and Perseverance)\\n- Considered a potential destination for future human missions\\n\\nWould you like me to elaborate on any of these aspects of Mars?\"\n        }\n    ],\n    \"stop_reason\": \"end_turn\",\n    \"stop_sequence\": null,\n    \"usage\": {\n        \"input_tokens\": 355,\n        \"cache_creation_input_tokens\": 0,\n        \"cache_read_input_tokens\": 0,\n        \"output_tokens\": 259\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "1624d6a5-abbd-496a-a0d4-a6b30d68245a",
+			"description": "# [Text generation](https://docs.anthropic.com/en/docs/build-with-claude/text-generation)\n\nClaude excels in a wide range of text-based tasks. Claude has been trained to ingest code, prose, and other natural language inputs, and provide text outputs in response.\n\nPrompts are best written as natural language queries as if you are instructing someone to do something, with the more detail the better. You can further improve your baseline prompt with [prompt engineering](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview)."
+		},
+		{
+			"name": "Models",
+			"item": [
+				{
+					"name": "List models",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f42d5417-e54c-4b65-b42f-c56fdcddb1a1",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Data array contains objects with 'type', 'id', 'display_name', and 'created_at' fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.data).to.be.an('array');",
+									"    responseData.data.forEach(function(item) {",
+									"        pm.expect(item).to.be.an('object');",
+									"        pm.expect(item).to.include.all.keys('type', 'id', 'display_name', 'created_at');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Has_more field is present and has a boolean value\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.have.property('has_more').that.is.a('boolean');",
+									"});",
+									"",
+									"",
+									"pm.test(\"First and last id fields are present in the response\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('first_id');",
+									"    pm.expect(responseData).to.have.property('last_id');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "97275047-c29c-44d1-b6e4-b8d69fa17485",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/models"
+					},
+					"response": [
+						{
+							"id": "5fe310dc-0287-4041-a5f1-4011d1f7a30f",
+							"name": "List models",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/models"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 20:04:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01SBS6yCWtube4AZCjgvFUf2"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fff46ea8d64091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": [\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-3-5-sonnet-20241022\",\n            \"display_name\": \"Claude 3.5 Sonnet (New)\",\n            \"created_at\": \"2024-10-22T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-3-5-haiku-20241022\",\n            \"display_name\": \"Claude 3.5 Haiku\",\n            \"created_at\": \"2024-10-22T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-3-5-sonnet-20240620\",\n            \"display_name\": \"Claude 3.5 Sonnet (Old)\",\n            \"created_at\": \"2024-06-20T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-3-haiku-20240307\",\n            \"display_name\": \"Claude 3 Haiku\",\n            \"created_at\": \"2024-03-07T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-3-opus-20240229\",\n            \"display_name\": \"Claude 3 Opus\",\n            \"created_at\": \"2024-02-29T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-3-sonnet-20240229\",\n            \"display_name\": \"Claude 3 Sonnet\",\n            \"created_at\": \"2024-02-29T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-2.1\",\n            \"display_name\": \"Claude 2.1\",\n            \"created_at\": \"2023-11-21T00:00:00Z\"\n        },\n        {\n            \"type\": \"model\",\n            \"id\": \"claude-2.0\",\n            \"display_name\": \"Claude 2.0\",\n            \"created_at\": \"2023-07-11T00:00:00Z\"\n        }\n    ],\n    \"has_more\": false,\n    \"first_id\": \"claude-3-5-sonnet-20241022\",\n    \"last_id\": \"claude-2.0\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get model",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "922a29f9-78f5-464e-8438-7106cbc770ba",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Response has the required fields - type, id, display_name, and created_at\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.include.all.keys('type', 'id', 'display_name', 'created_at');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Type, id, display_name, and created_at are not empty strings\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.type).to.not.be.empty;",
+									"    pm.expect(responseData.id).to.not.be.empty;",
+									"    pm.expect(responseData.display_name).to.not.be.empty;",
+									"    pm.expect(responseData.created_at).to.not.be.empty;",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content-Type header is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.include(\"application/json\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "6dd19e6e-55b7-44c0-a776-f24121b72667",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/models/{{model}}"
+					},
+					"response": [
+						{
+							"id": "4df55d50-21eb-4339-89fa-ac845b2fe524",
+							"name": "Get model",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/models/{{model}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 20:06:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01FprTTYaw4mwpjwLJV1Q1Kw"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fff4953faf8091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"type\": \"model\",\n    \"id\": \"claude-3-5-sonnet-20241022\",\n    \"display_name\": \"Claude 3.5 Sonnet (New)\",\n    \"created_at\": \"2024-10-22T00:00:00Z\"\n}"
+						}
+					]
+				}
+			],
+			"id": "9253f932-f87f-41b9-9e10-1a59becc0091",
+			"description": "Claude is a family of state-of-the-art large language models developed by Anthropic. Use [this](https://docs.anthropic.com/en/docs/about-claude/models) guide to compare models."
+		},
+		{
+			"name": "Batch Messages",
+			"item": [
+				{
+					"name": "Create message batch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "24b807eb-a10e-45ed-b5ac-11713829c98f",
+								"exec": [
+									"// Stores the value in a collection level variable",
+									"var id = pm.response.json().id;",
+									"pm.collectionVariables.set(\"msg_batch_id\", id);",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "0a0a4e3a-988f-435a-998e-c0a2c39c2a41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requests\": [\n        {\n            \"custom_id\": \"my-first-request\",\n            \"params\": {\n                \"model\": \"{{model}}\",\n                \"max_tokens\": {{max_tokens}},\n                \"messages\": [\n                    {\"role\": \"user\", \"content\": \"Hello, world\"}\n                ]\n            }\n        },\n        {\n            \"custom_id\": \"my-second-request\",\n            \"params\": {\n                \"model\": \"{{model}}\",\n                \"max_tokens\": {{max_tokens}},\n                \"messages\": [\n                    {\"role\": \"user\", \"content\": \"Hi again, friend\"}\n                ]\n            }\n        }\n    ]\n}\n"
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/batches"
+					},
+					"response": [
+						{
+							"id": "faa6d951-9135-4a6d-af43-1ca445761031",
+							"name": "Create message batch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"requests\": [\n        {\n            \"custom_id\": \"my-first-request\",\n            \"params\": {\n                \"model\": \"{{model}}\",\n                \"max_tokens\": {{max_tokens}},\n                \"messages\": [\n                    {\"role\": \"user\", \"content\": \"Hello, world\"}\n                ]\n            }\n        },\n        {\n            \"custom_id\": \"my-second-request\",\n            \"params\": {\n                \"model\": \"{{model}}\",\n                \"max_tokens\": {{max_tokens}},\n                \"messages\": [\n                    {\"role\": \"user\", \"content\": \"Hi again, friend\"}\n                ]\n            }\n        }\n    ]\n}\n"
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/batches"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:18:12 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01PzgXihRYhjhU2KTV8mVx9J"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffb2bfec17091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msgbatch_01U3SypUzcb7m2qfT5qCpNnv\",\n    \"type\": \"message_batch\",\n    \"processing_status\": \"in_progress\",\n    \"request_counts\": {\n        \"processing\": 2,\n        \"succeeded\": 0,\n        \"errored\": 0,\n        \"canceled\": 0,\n        \"expired\": 0\n    },\n    \"ended_at\": null,\n    \"created_at\": \"2025-01-10T21:18:12.552321+00:00\",\n    \"expires_at\": \"2025-01-11T21:18:12.552321+00:00\",\n    \"archived_at\": null,\n    \"cancel_initiated_at\": null,\n    \"results_url\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get message batch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "731aabfa-e6a3-449f-abba-a17b7b03b22a",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('id');",
+									"    pm.expect(responseData).to.have.property('type');",
+									"    pm.expect(responseData).to.have.property('processing_status');",
+									"    pm.expect(responseData).to.have.property('request_counts');",
+									"    pm.expect(responseData).to.have.property('ended_at');",
+									"    pm.expect(responseData).to.have.property('created_at');",
+									"    pm.expect(responseData).to.have.property('expires_at');",
+									"    pm.expect(responseData).to.have.property('archived_at');",
+									"    pm.expect(responseData).to.have.property('cancel_initiated_at');",
+									"    pm.expect(responseData).to.have.property('results_url');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Processing status is a valid string\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.processing_status).to.be.a('string');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Request counts have non-negative integer values\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.request_counts).to.be.an('object');",
+									"    ",
+									"    Object.keys(responseData.request_counts).forEach(function(key) {",
+									"        pm.expect(responseData.request_counts[key]).to.be.a('number');",
+									"        pm.expect(responseData.request_counts[key]).to.be.at.least(0);",
+									"    });",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "7b1477af-b590-4489-97dc-39d3c6dfaf31",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}"
+					},
+					"response": [
+						{
+							"id": "ee4e6565-5840-4f18-a6e8-3155a5f46435",
+							"name": "Get message batch",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:20:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "retry-after",
+									"value": "10"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01XQqZfryQ4waxzB9bd2kh9W"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffb6445aec091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msgbatch_01U3SypUzcb7m2qfT5qCpNnv\",\n    \"type\": \"message_batch\",\n    \"processing_status\": \"in_progress\",\n    \"request_counts\": {\n        \"processing\": 2,\n        \"succeeded\": 0,\n        \"errored\": 0,\n        \"canceled\": 0,\n        \"expired\": 0\n    },\n    \"ended_at\": null,\n    \"created_at\": \"2025-01-10T21:18:12.552321+00:00\",\n    \"expires_at\": \"2025-01-11T21:18:12.552321+00:00\",\n    \"archived_at\": null,\n    \"cancel_initiated_at\": null,\n    \"results_url\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get message batch result",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b588d9d8-1615-4199-928c-58089e1d30de",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.equal(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('array');",
+									"    responseData.forEach(function(item) {",
+									"        pm.expect(item).to.have.property('custom_id');",
+									"        pm.expect(item).to.have.property('result');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Validate the message object within each result\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('array');",
+									"    ",
+									"    responseData.forEach(function(result) {",
+									"        pm.expect(result).to.have.property('result');",
+									"        pm.expect(result.result).to.be.an('object');",
+									"        pm.expect(result.result).to.have.property('message');",
+									"        pm.expect(result.result.message).to.be.an('object');",
+									"        // Add more specific checks for the message object if needed",
+									"    });",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"pm.test(\"Content array is present and contains the expected number of elements in each message\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('array');",
+									"",
+									"    responseData.forEach(function (message) {",
+									"        pm.expect(message.content).to.exist.and.to.be.an('array');",
+									"        pm.expect(message.content).to.have.lengthOf.at.least(1, \"Content array should not be empty\");",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "7fbb28eb-ee5e-412f-886a-c165175074b7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}/results"
+					},
+					"response": [
+						{
+							"id": "726bbc7b-340b-4b7f-b9e0-fab6710c90f8",
+							"name": "Get message batch result",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}/results"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:23:50 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "content-disposition",
+									"value": "attachment; filename=\"msgbatch_0118FnCVEkDnJG3Heppevfwb_results.jsonl\""
+								},
+								{
+									"key": "request-id",
+									"value": "req_012pLa6MqpvYdpY99zM34GUf"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffbb0269f9091d-LAX"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\"custom_id\":\"my-first-request\",\"result\":{\"type\":\"succeeded\",\"message\":{\"id\":\"msg_018bzJBM5AegZunvEnEy3Ut6\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20241022\",\"content\":[{\"type\":\"text\",\"text\":\"Hi there! How can I help you today?\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":10,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":13}}}}\n{\"custom_id\":\"my-second-request\",\"result\":{\"type\":\"succeeded\",\"message\":{\"id\":\"msg_01LB4nLdxCvTowvQi31BKmP8\",\"type\":\"message\",\"role\":\"assistant\",\"model\":\"claude-3-5-sonnet-20241022\",\"content\":[{\"type\":\"text\",\"text\":\"Hello! Nice to see you again. How are you today?\"}],\"stop_reason\":\"end_turn\",\"stop_sequence\":null,\"usage\":{\"input_tokens\":11,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":16}}}}"
+						}
+					]
+				},
+				{
+					"name": "List message batches",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "281a3acd-6d4c-45d4-8501-9259d00490fe",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.data).to.be.an('array');",
+									"    ",
+									"    responseData.data.forEach(function(batch) {",
+									"        pm.expect(batch).to.have.property('id');",
+									"        pm.expect(batch).to.have.property('type');",
+									"        pm.expect(batch).to.have.property('processing_status');",
+									"        pm.expect(batch).to.have.property('request_counts');",
+									"        pm.expect(batch).to.have.property('ended_at');",
+									"        pm.expect(batch).to.have.property('created_at');",
+									"        pm.expect(batch).to.have.property('expires_at');",
+									"        pm.expect(batch).to.have.property('archived_at');",
+									"        pm.expect(batch).to.have.property('cancel_initiated_at');",
+									"        pm.expect(batch).to.have.property('results_url');",
+									"    });",
+									"});",
+									"",
+									"",
+									"pm.test(\"Data array is present and contains at least one element\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.data).to.exist.and.to.be.an('array').that.is.not.empty;",
+									"});",
+									"",
+									"",
+									"pm.test(\"Verify request_counts object contains expected keys and non-negative integer values\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.data).to.be.an('array').and.to.have.lengthOf.at.least(1);",
+									"",
+									"    responseData.data.forEach(function(batch) {",
+									"        pm.expect(batch.request_counts).to.be.an('object');",
+									"        pm.expect(batch.request_counts.processing).to.be.a('number').and.to.be.at.least(0);",
+									"        pm.expect(batch.request_counts.succeeded).to.be.a('number').and.to.be.at.least(0);",
+									"        pm.expect(batch.request_counts.errored).to.be.a('number').and.to.be.at.least(0);",
+									"        pm.expect(batch.request_counts.canceled).to.be.a('number').and.to.be.at.least(0);",
+									"        pm.expect(batch.request_counts.expired).to.be.a('number').and.to.be.at.least(0);",
+									"    });",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "52eb848f-e2eb-43c5-9b57-a3a19eaaebe1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/batches"
+					},
+					"response": [
+						{
+							"id": "fe9d5792-a96e-4708-a87a-3b60d2650e24",
+							"name": "List message batches",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/batches"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:22:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01MA39nkhK7awx9yZRJS6hAf"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffb92f5e1d091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": [\n        {\n            \"id\": \"msgbatch_0118FnCVEkDnJG3Heppevfwb\",\n            \"type\": \"message_batch\",\n            \"processing_status\": \"in_progress\",\n            \"request_counts\": {\n                \"processing\": 2,\n                \"succeeded\": 0,\n                \"errored\": 0,\n                \"canceled\": 0,\n                \"expired\": 0\n            },\n            \"ended_at\": null,\n            \"created_at\": \"2025-01-10T21:22:32.301764+00:00\",\n            \"expires_at\": \"2025-01-11T21:22:32.301764+00:00\",\n            \"archived_at\": null,\n            \"cancel_initiated_at\": null,\n            \"results_url\": null\n        },\n        {\n            \"id\": \"msgbatch_01U3SypUzcb7m2qfT5qCpNnv\",\n            \"type\": \"message_batch\",\n            \"processing_status\": \"in_progress\",\n            \"request_counts\": {\n                \"processing\": 2,\n                \"succeeded\": 0,\n                \"errored\": 0,\n                \"canceled\": 0,\n                \"expired\": 0\n            },\n            \"ended_at\": null,\n            \"created_at\": \"2025-01-10T21:18:12.552321+00:00\",\n            \"expires_at\": \"2025-01-11T21:18:12.552321+00:00\",\n            \"archived_at\": null,\n            \"cancel_initiated_at\": null,\n            \"results_url\": null\n        }\n    ],\n    \"has_more\": false,\n    \"first_id\": \"msgbatch_0118FnCVEkDnJG3Heppevfwb\",\n    \"last_id\": \"msgbatch_01U3SypUzcb7m2qfT5qCpNnv\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel message batch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f6a564f0-fe3e-40f0-9650-bf008da103c3",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Validate the response schema for required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData.id).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.type).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.processing_status).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.request_counts).to.exist.and.to.be.an('object');",
+									"    pm.expect(responseData.ended_at).to.exist;",
+									"    pm.expect(responseData.created_at).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.expires_at).to.exist.and.to.be.a('string');",
+									"    pm.expect(responseData.cancel_initiated_at).to.exist.and.to.be.a('string');",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "8adaf2c2-7da1-4bd3-ac23-6f29f50ec67d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}/cancel"
+					},
+					"response": [
+						{
+							"id": "7a51a7d3-68ff-4801-91a5-fcfb7876bb7f",
+							"name": "Cancel message batch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}/cancel"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:24:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01BAXQ5awhffLDSMjNCuYWR3"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffbba3bfba091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msgbatch_01Yb1Akb6Cw9hw8BPzVFwNeS\",\n    \"type\": \"message_batch\",\n    \"processing_status\": \"canceling\",\n    \"request_counts\": {\n        \"processing\": 2,\n        \"succeeded\": 0,\n        \"errored\": 0,\n        \"canceled\": 0,\n        \"expired\": 0\n    },\n    \"ended_at\": null,\n    \"created_at\": \"2025-01-10T21:24:13.318448+00:00\",\n    \"expires_at\": \"2025-01-11T21:24:13.318448+00:00\",\n    \"archived_at\": null,\n    \"cancel_initiated_at\": \"2025-01-10T21:24:16.685893+00:00\",\n    \"results_url\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete message batch",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d7bf810-70c4-48ff-9c65-43d9d0d516f8",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields - id and type\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.property('id');",
+									"    pm.expect(responseData).to.have.property('type');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Id is a non-empty string\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Id should be a non-empty string\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Type is a non-empty string\", function () {",
+									"  const responseData = pm.response.json();",
+									"  ",
+									"  pm.expect(responseData.type).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Type should not be empty\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "2345e7a5-da97-4582-a566-4bf918821a63",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "anthropic-version",
+								"value": "{{anthropicVersion}}"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}"
+					},
+					"response": [
+						{
+							"id": "9dcf2c28-dd20-45cf-8d8d-5360f387ed1b",
+							"name": "Delete message batch",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "anthropic-version",
+										"value": "{{anthropicVersion}}"
+									},
+									{
+										"key": "content-type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "{{baseUrl}}/{{version}}/messages/batches/{{msg_batch_id}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 10 Jan 2025 21:26:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "request-id",
+									"value": "req_01Unqds1owZBbCqKoQU1qW7i"
+								},
+								{
+									"key": "via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "X-Robots-Tag",
+									"value": "none"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "8fffbf2bd93f091d-LAX"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"msgbatch_0118FnCVEkDnJG3Heppevfwb\",\n    \"type\": \"message_batch_deleted\"\n}"
+						}
+					]
+				}
+			],
+			"id": "80e9baab-19f3-4a39-b832-a83f79dbaff1",
+			"description": "The Message Batches API is a powerful, cost-effective way to asynchronously process large volumes of [Messages](https://docs.anthropic.com/en/api/messages) requests. This approach is well-suited to tasks that do not require immediate responses, reducing costs by 50% while increasing throughput."
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": {
+			"value": "{{vault:anthropic-secret-key}}",
+			"key": "x-api-key"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "19d7f311-789b-482d-9236-8e8a914d7013",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "917861ae-edf8-4017-a1ba-ebd94f94f681",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "max_tokens",
+			"value": "1024"
+		},
+		{
+			"key": "anthropicVersion",
+			"value": "2023-06-01"
+		},
+		{
+			"key": "model",
+			"value": "claude-3-5-sonnet-latest"
+		},
+		{
+			"key": "image_base_64",
+			"value": ""
+		},
+		{
+			"key": "media_type",
+			"value": "image/jpeg"
+		},
+		{
+			"key": "msg_batch_id",
+			"value": ""
+		}
+	]
+}
